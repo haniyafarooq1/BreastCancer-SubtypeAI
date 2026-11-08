@@ -1,0 +1,11 @@
+.venv/
+__pycache__/
+*.pyc
+.ipynb_checkpoints/
+.env
+
+data/raw/GSE96058_gene_expression_3273_samples_and_136_replicates_transformed.csv.gz
+
+data/processed/combined_dataset.csv
+data/processed/primary_dataset.csv
+data/processed/technical_replicates.csv
