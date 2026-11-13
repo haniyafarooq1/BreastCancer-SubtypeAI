@@ -1,0 +1,151 @@
+subtype,sign,rank,gene,coefficient,direction
+Basal,positive,1,BAIAP2L2,0.1347545573216646,higher expression pushes TOWARDS Basal
+Basal,positive,2,SERPINA3,0.11307661618915865,higher expression pushes TOWARDS Basal
+Basal,positive,3,GJB3,0.10862244079250939,higher expression pushes TOWARDS Basal
+Basal,positive,4,MFI2,0.1085482727826215,higher expression pushes TOWARDS Basal
+Basal,positive,5,IL22RA2,0.1070377899669465,higher expression pushes TOWARDS Basal
+Basal,positive,6,C8orf46,0.1031970403238956,higher expression pushes TOWARDS Basal
+Basal,positive,7,FOXC1,0.1015682357494466,higher expression pushes TOWARDS Basal
+Basal,positive,8,C2orf82,0.09850271455092167,higher expression pushes TOWARDS Basal
+Basal,positive,9,PROM1,0.09073376946569747,higher expression pushes TOWARDS Basal
+Basal,positive,10,KLF5,0.09066047072899022,higher expression pushes TOWARDS Basal
+Basal,positive,11,SLC6A14,0.09000305373676588,higher expression pushes TOWARDS Basal
+Basal,positive,12,RNF182,0.08842441484269593,higher expression pushes TOWARDS Basal
+Basal,positive,13,APOBEC3B,0.08790532379642221,higher expression pushes TOWARDS Basal
+Basal,positive,14,CPA3,0.08719141790842093,higher expression pushes TOWARDS Basal
+Basal,positive,15,MMP1,0.0847842556072572,higher expression pushes TOWARDS Basal
+Basal,negative,1,MSX2,-0.12364154970513949,higher expression pushes AWAY from Basal
+Basal,negative,2,ERBB2,-0.12355495704103173,higher expression pushes AWAY from Basal
+Basal,negative,3,NDNF,-0.11573712500232308,higher expression pushes AWAY from Basal
+Basal,negative,4,SLC9A3R1,-0.11033157771308753,higher expression pushes AWAY from Basal
+Basal,negative,5,BCAS1,-0.10571043349843998,higher expression pushes AWAY from Basal
+Basal,negative,6,PRRT3,-0.09856280547312353,higher expression pushes AWAY from Basal
+Basal,negative,7,RAB27B,-0.09675388951394495,higher expression pushes AWAY from Basal
+Basal,negative,8,TOX3,-0.09631811684434428,higher expression pushes AWAY from Basal
+Basal,negative,9,ST8SIA6-AS1,-0.09264387401273902,higher expression pushes AWAY from Basal
+Basal,negative,10,SPINK8,-0.09207116393575027,higher expression pushes AWAY from Basal
+Basal,negative,11,SLC7A3,-0.09032101804064327,higher expression pushes AWAY from Basal
+Basal,negative,12,SULT2B1,-0.08796124493773738,higher expression pushes AWAY from Basal
+Basal,negative,13,ADAMTS5,-0.0873553464587143,higher expression pushes AWAY from Basal
+Basal,negative,14,TMEM45B,-0.08709982705233753,higher expression pushes AWAY from Basal
+Basal,negative,15,C10orf107,-0.08268598808100702,higher expression pushes AWAY from Basal
+Her2,positive,1,ERBB2,0.2938143544711852,higher expression pushes TOWARDS Her2
+Her2,positive,2,GRB7,0.21720584862113576,higher expression pushes TOWARDS Her2
+Her2,positive,3,TMEM45B,0.2022378154551984,higher expression pushes TOWARDS Her2
+Her2,positive,4,CDH3,0.17297421108532446,higher expression pushes TOWARDS Her2
+Her2,positive,5,C1QL4,0.17006629558458014,higher expression pushes TOWARDS Her2
+Her2,positive,6,TSPAN1,0.15146403908337389,higher expression pushes TOWARDS Her2
+Her2,positive,7,RP11-279F6.1,0.13446055319401845,higher expression pushes TOWARDS Her2
+Her2,positive,8,CLCA2,0.1296222761119789,higher expression pushes TOWARDS Her2
+Her2,positive,9,SLC7A8,0.12514909042665276,higher expression pushes TOWARDS Her2
+Her2,positive,10,GRAMD2,0.11961811388407727,higher expression pushes TOWARDS Her2
+Her2,positive,11,KRT81,0.11749989414011898,higher expression pushes TOWARDS Her2
+Her2,positive,12,NMU,0.11576179678798848,higher expression pushes TOWARDS Her2
+Her2,positive,13,PRR11,0.11441099681417898,higher expression pushes TOWARDS Her2
+Her2,positive,14,LINC00940,0.11376825668520156,higher expression pushes TOWARDS Her2
+Her2,positive,15,FMO5,0.1133391533028422,higher expression pushes TOWARDS Her2
+Her2,negative,1,SLC39A6,-0.23678039531564934,higher expression pushes AWAY from Her2
+Her2,negative,2,ESR1,-0.19613800958235417,higher expression pushes AWAY from Her2
+Her2,negative,3,NAT1,-0.16126152784246153,higher expression pushes AWAY from Her2
+Her2,negative,4,CHODL,-0.15587851736649408,higher expression pushes AWAY from Her2
+Her2,negative,5,SPATA18,-0.14296710827456366,higher expression pushes AWAY from Her2
+Her2,negative,6,CRIP1,-0.1398463259834841,higher expression pushes AWAY from Her2
+Her2,negative,7,PTX3,-0.13350981376654517,higher expression pushes AWAY from Her2
+Her2,negative,8,TNRC18P1,-0.12244535361284149,higher expression pushes AWAY from Her2
+Her2,negative,9,ZSWIM5,-0.12041383578268514,higher expression pushes AWAY from Her2
+Her2,negative,10,POPDC3,-0.11751439451945819,higher expression pushes AWAY from Her2
+Her2,negative,11,FCER1A,-0.11476435007439051,higher expression pushes AWAY from Her2
+Her2,negative,12,DNALI1,-0.11366254009876407,higher expression pushes AWAY from Her2
+Her2,negative,13,MMP23B,-0.1128752721576978,higher expression pushes AWAY from Her2
+Her2,negative,14,GFRA1,-0.11264797255493682,higher expression pushes AWAY from Her2
+Her2,negative,15,KRT14,-0.11174967301621848,higher expression pushes AWAY from Her2
+LumA,positive,1,NAT1,0.2781254925033949,higher expression pushes TOWARDS LumA
+LumA,positive,2,MAPT,0.25815412255787146,higher expression pushes TOWARDS LumA
+LumA,positive,3,PGR,0.21328809879259725,higher expression pushes TOWARDS LumA
+LumA,positive,4,BCL2,0.20726066163023965,higher expression pushes TOWARDS LumA
+LumA,positive,5,LOC101054525,0.17828088657961064,higher expression pushes TOWARDS LumA
+LumA,positive,6,GRIA4,0.1639169209358329,higher expression pushes TOWARDS LumA
+LumA,positive,7,KCNK15,0.16312500861589002,higher expression pushes TOWARDS LumA
+LumA,positive,8,SLC39A6,0.16209518137069312,higher expression pushes TOWARDS LumA
+LumA,positive,9,PPP1R14C,0.15816002863392492,higher expression pushes TOWARDS LumA
+LumA,positive,10,MISP,0.15007324539955427,higher expression pushes TOWARDS LumA
+LumA,positive,11,TBC1D9,0.14957916002843102,higher expression pushes TOWARDS LumA
+LumA,positive,12,MGC4836,0.14599321680472316,higher expression pushes TOWARDS LumA
+LumA,positive,13,KLK7,0.1368984117084966,higher expression pushes TOWARDS LumA
+LumA,positive,14,SRCIN1,0.13608307568183153,higher expression pushes TOWARDS LumA
+LumA,positive,15,LYPD6,0.1357962770416517,higher expression pushes TOWARDS LumA
+LumA,negative,1,NUF2,-0.24356437065218056,higher expression pushes AWAY from LumA
+LumA,negative,2,SEMA6D,-0.19090466137872053,higher expression pushes AWAY from LumA
+LumA,negative,3,CDC6,-0.1833328202187467,higher expression pushes AWAY from LumA
+LumA,negative,4,BIRC5,-0.17618809562647073,higher expression pushes AWAY from LumA
+LumA,negative,5,FPR2,-0.16946680088223132,higher expression pushes AWAY from LumA
+LumA,negative,6,PTTG1,-0.16827653767146455,higher expression pushes AWAY from LumA
+LumA,negative,7,KIF18B,-0.16818436981218143,higher expression pushes AWAY from LumA
+LumA,negative,8,NMNAT3,-0.16552634734720348,higher expression pushes AWAY from LumA
+LumA,negative,9,BPI,-0.165182819170287,higher expression pushes AWAY from LumA
+LumA,negative,10,ZIC1,-0.16151355857101923,higher expression pushes AWAY from LumA
+LumA,negative,11,MND1,-0.16093489067462818,higher expression pushes AWAY from LumA
+LumA,negative,12,CTSV,-0.15580874317878005,higher expression pushes AWAY from LumA
+LumA,negative,13,GPC2,-0.1465822458404117,higher expression pushes AWAY from LumA
+LumA,negative,14,TK1,-0.14484732104775605,higher expression pushes AWAY from LumA
+LumA,negative,15,TMSB15A,-0.14071462102762397,higher expression pushes AWAY from LumA
+LumB,positive,1,ESR1,0.201414427226978,higher expression pushes TOWARDS LumB
+LumB,positive,2,SLC39A6,0.1907799804766271,higher expression pushes TOWARDS LumB
+LumB,positive,3,CRIP1,0.1898382030150147,higher expression pushes TOWARDS LumB
+LumB,positive,4,NUF2,0.18541720326356115,higher expression pushes TOWARDS LumB
+LumB,positive,5,NAT1,0.17490527216758806,higher expression pushes TOWARDS LumB
+LumB,positive,6,ATP13A5,0.1609338261932872,higher expression pushes TOWARDS LumB
+LumB,positive,7,ACOX2,0.1587430150563184,higher expression pushes TOWARDS LumB
+LumB,positive,8,RERG,0.15356293074471722,higher expression pushes TOWARDS LumB
+LumB,positive,9,TK1,0.14973796260069458,higher expression pushes TOWARDS LumB
+LumB,positive,10,SSC5D,0.1448575046876307,higher expression pushes TOWARDS LumB
+LumB,positive,11,BIRC5,0.14390579141627577,higher expression pushes TOWARDS LumB
+LumB,positive,12,ATP1A4,0.14241037299025025,higher expression pushes TOWARDS LumB
+LumB,positive,13,PBK,0.14087690425192065,higher expression pushes TOWARDS LumB
+LumB,positive,14,CST9,0.13595467766686936,higher expression pushes TOWARDS LumB
+LumB,positive,15,PKIB,0.13439644214242893,higher expression pushes TOWARDS LumB
+LumB,negative,1,CDH3,-0.2600047133563258,higher expression pushes AWAY from LumB
+LumB,negative,2,FAM189A2,-0.1959245551392016,higher expression pushes AWAY from LumB
+LumB,negative,3,GRB7,-0.18544675184908951,higher expression pushes AWAY from LumB
+LumB,negative,4,ERBB2,-0.18171586405382315,higher expression pushes AWAY from LumB
+LumB,negative,5,KCNE1,-0.18117505962404756,higher expression pushes AWAY from LumB
+LumB,negative,6,MAPT-IT1,-0.17585607764889002,higher expression pushes AWAY from LumB
+LumB,negative,7,IL12RB2,-0.17067684778311817,higher expression pushes AWAY from LumB
+LumB,negative,8,MIA-RAB4B,-0.16701990153724203,higher expression pushes AWAY from LumB
+LumB,negative,9,PPP1R14C,-0.16492347911160332,higher expression pushes AWAY from LumB
+LumB,negative,10,SYT8,-0.15658068264514918,higher expression pushes AWAY from LumB
+LumB,negative,11,CPA4,-0.1563390665600756,higher expression pushes AWAY from LumB
+LumB,negative,12,PADI2,-0.15423169250495006,higher expression pushes AWAY from LumB
+LumB,negative,13,FERMT1,-0.15397709623057557,higher expression pushes AWAY from LumB
+LumB,negative,14,KRT81,-0.15072170537390803,higher expression pushes AWAY from LumB
+LumB,negative,15,FAM110C,-0.14944685727863816,higher expression pushes AWAY from LumB
+Normal,positive,1,LINC00162,0.18700262394136138,higher expression pushes TOWARDS Normal
+Normal,positive,2,IGF1R,0.17104940938677782,higher expression pushes TOWARDS Normal
+Normal,positive,3,TAC1,0.15747185848539694,higher expression pushes TOWARDS Normal
+Normal,positive,4,NTF4,0.15377353078152017,higher expression pushes TOWARDS Normal
+Normal,positive,5,BPI,0.14596193942542096,higher expression pushes TOWARDS Normal
+Normal,positive,6,MIA-RAB4B,0.1384818834220872,higher expression pushes TOWARDS Normal
+Normal,positive,7,CX3CL1,0.13540377235830714,higher expression pushes TOWARDS Normal
+Normal,positive,8,ABLIM3,0.13293999879915044,higher expression pushes TOWARDS Normal
+Normal,positive,9,COL17A1,0.13200544284629123,higher expression pushes TOWARDS Normal
+Normal,positive,10,FERMT1,0.13060822249432782,higher expression pushes TOWARDS Normal
+Normal,positive,11,DSG3,0.12943628506050583,higher expression pushes TOWARDS Normal
+Normal,positive,12,WNT6,0.12481104135407473,higher expression pushes TOWARDS Normal
+Normal,positive,13,CXCL5,0.1246421359500069,higher expression pushes TOWARDS Normal
+Normal,positive,14,CDO1,0.12323628528754638,higher expression pushes TOWARDS Normal
+Normal,positive,15,FPR2,0.12197430349731915,higher expression pushes TOWARDS Normal
+Normal,negative,1,NAT1,-0.2538589670626924,higher expression pushes AWAY from Normal
+Normal,negative,2,MMP1,-0.21482881627427677,higher expression pushes AWAY from Normal
+Normal,negative,3,RIMS4,-0.16083423083885676,higher expression pushes AWAY from Normal
+Normal,negative,4,SYTL2,-0.15974111950842648,higher expression pushes AWAY from Normal
+Normal,negative,5,UBE2T,-0.15118401018648603,higher expression pushes AWAY from Normal
+Normal,negative,6,ULBP2,-0.14904605103163196,higher expression pushes AWAY from Normal
+Normal,negative,7,LRRC6,-0.14327154413289087,higher expression pushes AWAY from Normal
+Normal,negative,8,ANLN,-0.14226814757650785,higher expression pushes AWAY from Normal
+Normal,negative,9,GPR126,-0.13739714084214902,higher expression pushes AWAY from Normal
+Normal,negative,10,NDC80,-0.12840398379147885,higher expression pushes AWAY from Normal
+Normal,negative,11,TTK,-0.12716783938223308,higher expression pushes AWAY from Normal
+Normal,negative,12,PKIB,-0.12548374383605598,higher expression pushes AWAY from Normal
+Normal,negative,13,VAV3,-0.12510365477678956,higher expression pushes AWAY from Normal
+Normal,negative,14,FSIP1,-0.12496885964810704,higher expression pushes AWAY from Normal
+Normal,negative,15,RHBDL1,-0.12397043196118104,higher expression pushes AWAY from Normal

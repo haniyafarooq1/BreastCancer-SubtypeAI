@@ -1,0 +1,9 @@
+,value
+PAM50 genes in dataset,50
+aliases used,none
+in training top-5000 variance,41
+selected by LR (k=1000),39
+in LR top 50,15
+selected by RF (k=500),38
+in RF top 50,16
+in Haniya top 50,11
