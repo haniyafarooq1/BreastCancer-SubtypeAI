@@ -4,7 +4,7 @@ LR (primary): coefficients, SHAP LinearExplainer (background = transformed TRAIN
               explained = full test set), global / per-class plots, waterfalls.
 RF:           SHAP TreeExplainer on a stratified test subset + impurity importance.
 SVC:          permutation importance on the test set only if estimated < ~10 min.
-Comparison:   Haniya's 20 biomarker candidates, her top-50 statistical genes, PAM50.
+Comparison:   the 20 DE biomarker candidates, the statistical top-50 genes, PAM50.
 
 Models are only loaded, never refit. Run from repo root:  python ml/04_explain.py
 """
@@ -237,9 +237,9 @@ else:
     svc_status = f"skipped: estimated {est / 60:.0f} min (> 10 min budget)"
 log(f"SVC permutation importance {svc_status}")
 
-# =================================================================== 4. Haniya comparison
+# =================================================================== 4. Comparison with the statistical analysis
 bc = []
-for f in sorted((C.HANIYA_RESULTS / "biomarker_candidates").glob("*_vs_*.csv")):
+for f in sorted((C.EXISTING_RESULTS / "biomarker_candidates").glob("*_vs_*.csv")):
     d = pd.read_csv(f, usecols=["gene", "effect_size", "adjusted_p_value"])
     d["comparison"] = f.stem
     bc.append(d)
@@ -251,12 +251,12 @@ stat = best_pair[["abs_effect", "comparison", "effect_size"]].rename(
     columns={"abs_effect": "max_abs_effect", "comparison": "max_effect_comparison"})
 stat = stat.sort_values("max_abs_effect", ascending=False)
 stat.insert(0, "stat_effect_rank", range(1, len(stat) + 1))
-kw = pd.read_csv(C.HANIYA_RESULTS / "differential_expression" / "all_gene_results.csv").set_index("gene")
+kw = pd.read_csv(C.EXISTING_RESULTS / "differential_expression" / "all_gene_results.csv").set_index("gene")
 stat["kruskal_statistic"] = kw["kruskal_statistic"]
 stat["kruskal_rank"] = stat["kruskal_statistic"].rank(ascending=False, method="min")
 stat["kw_significant"] = kw["significant"]
-hani_top50 = list(stat.head(50).index)
-hani_top50_kw = list(stat.sort_values("kruskal_statistic", ascending=False).head(50).index)
+stat_top50 = list(stat.head(50).index)
+stat_top50_kw = list(stat.sort_values("kruskal_statistic", ascending=False).head(50).index)
 
 lr_top50 = list(lr_imp.head(50).index)
 rf_top50 = list(rf_imp.head(50).index)
@@ -264,7 +264,7 @@ n_tested = len(stat)
 
 bm_rows = []
 lr_sel, rf_sel = set(lr_genes), set(rf_genes)
-for g in C.HANIYA_BIOMARKERS:
+for g in C.DE_BIOMARKER_CANDIDATES:
     bm_rows.append({
         "gene": g,
         "in_train_top5000_variance": g in var_genes_train,
@@ -275,36 +275,36 @@ for g in C.HANIYA_BIOMARKERS:
         "selected_by_RF_SelectKBest_k500": g in rf_sel,
         "RF_shap_rank_of_500": int(rf_imp.loc[g, "shap_rank"]) if g in rf_sel else None,
         "RF_mdi_rank_of_500": int(rf_imp.loc[g, "mdi_rank"]) if g in rf_sel else None,
-        "Haniya_effect_rank": int(stat.loc[g, "stat_effect_rank"]),
-        "Haniya_max_effect_comparison": stat.loc[g, "max_effect_comparison"],
+        "statistical_rank": int(stat.loc[g, "stat_effect_rank"]),
+        "statistical_strongest_contrast": stat.loc[g, "max_effect_comparison"],
         "in_LR_top50": g in lr_top50, "in_RF_top50": g in rf_top50,
     })
 bm = pd.DataFrame(bm_rows)
-bm.to_csv(OUT / "haniya_biomarkers_vs_ml.csv", index=False)
+bm.to_csv(OUT / "biomarker_candidates_vs_ml.csv", index=False)
 
 ov = {
-    "LR top50 ∩ Haniya top50 (max |effect|)": set(lr_top50) & set(hani_top50),
-    "RF top50 ∩ Haniya top50 (max |effect|)": set(rf_top50) & set(hani_top50),
-    "LR top50 ∩ Haniya top50 (Kruskal H)": set(lr_top50) & set(hani_top50_kw),
+    "LR top50 ∩ statistical top50 (max |effect|)": set(lr_top50) & set(stat_top50),
+    "RF top50 ∩ statistical top50 (max |effect|)": set(rf_top50) & set(stat_top50),
+    "LR top50 ∩ statistical top50 (Kruskal H)": set(lr_top50) & set(stat_top50_kw),
     "LR top50 ∩ RF top50": set(lr_top50) & set(rf_top50),
 }
 ov_df = pd.DataFrame([{"comparison": k, "n_overlap": len(v), "genes": ", ".join(sorted(v))} for k, v in ov.items()])
 ov_df["expected_by_chance"] = round(50 * 50 / n_tested, 2)
 ov_df.to_csv(OUT / "overlap_summary.csv", index=False)
 
-new = [g for g in lr_top50 if g not in hani_top50]
+new = [g for g in lr_top50 if g not in stat_top50]
 new_df = pd.DataFrame({
     "gene": new,
     "LR_rank": [int(lr_imp.loc[g, "rank"]) for g in new],
     "LR_subtype_most_important": [lr_imp.loc[g, "subtype_most_important"] for g in new],
     "LR_direction": [lr_imp.loc[g, "direction_in_that_subtype"] for g in new],
-    "Haniya_effect_rank": [int(stat.loc[g, "stat_effect_rank"]) if g in stat.index else None for g in new],
-    "Haniya_max_abs_effect": [stat.loc[g, "max_abs_effect"] if g in stat.index else None for g in new],
-    "Haniya_kw_significant": [bool(stat.loc[g, "kw_significant"]) if g in stat.index else None for g in new],
+    "statistical_rank": [int(stat.loc[g, "stat_effect_rank"]) if g in stat.index else None for g in new],
+    "statistical_max_abs_effect": [stat.loc[g, "max_abs_effect"] if g in stat.index else None for g in new],
+    "kruskal_wallis_significant": [bool(stat.loc[g, "kw_significant"]) if g in stat.index else None for g in new],
     "in_PAM50": [g in set() for g in new],  # filled below
 })
-hani_top50_df = stat.head(50).reset_index()[["gene", "stat_effect_rank", "max_abs_effect", "max_effect_comparison"]]
-hani_top50_df.to_csv(OUT / "haniya_top50_statistical_genes.csv", index=False)
+stat_top50_df = stat.head(50).reset_index()[["gene", "stat_effect_rank", "max_abs_effect", "max_effect_comparison"]]
+stat_top50_df.to_csv(OUT / "statistical_top50_genes.csv", index=False)
 
 # =================================================================== 5. PAM50
 PAM50 = ["ACTR3B", "ANLN", "BAG1", "BCL2", "BIRC5", "BLVRA", "CCNB1", "CCNE1", "CDC20", "CDC6", "CDH3",
@@ -326,13 +326,13 @@ for g, col in pam_map.items():
         "in_LR_top50": col in lr_top50,
         "selected_RF_k500": col in rf_sel, "RF_shap_rank": int(rf_imp.loc[col, "shap_rank"]) if col in rf_sel else None,
         "in_RF_top50": col in rf_top50,
-        "in_Haniya_top50": col in hani_top50,
+        "in_statistical_top50": col in stat_top50,
     })
 pam = pd.DataFrame(pam_rows)
 pam.to_csv(OUT / "pam50_check.csv", index=False)
 pam_cols = set(pam["dataset_column"].dropna())
 new_df["in_PAM50"] = new_df["gene"].isin(pam_cols)
-new_df.to_csv(OUT / "new_ml_genes_not_in_haniya_top50.csv", index=False)
+new_df.to_csv(OUT / "new_ml_genes_not_in_statistical_top50.csv", index=False)
 pam_counts = {
     "PAM50 genes in dataset": int(pam["in_dataset"].sum()),
     "aliases used": {g: c for g, c in pam_map.items() if c and c != g} or "none",
@@ -341,7 +341,7 @@ pam_counts = {
     "in LR top 50": int(pam["in_LR_top50"].sum()),
     "selected by RF (k=500)": int(pam["selected_RF_k500"].sum()),
     "in RF top 50": int(pam["in_RF_top50"].sum()),
-    "in Haniya top 50": int(pam["in_Haniya_top50"].sum()),
+    "in statistical top 50": int(pam["in_statistical_top50"].sum()),
 }
 pd.Series(pam_counts).to_csv(OUT / "pam50_counts.csv", header=["value"])
 
@@ -363,9 +363,9 @@ print("\nRF TOP 20 (SHAP | MDI)\n" + rf_imp.head(20)[["shap_rank", "mdi_rank", "
                                                      "subtype_most_important"]].round(4).to_string())
 if svc_imp is not None:
     print("\nSVC PERMUTATION TOP 15\n" + svc_imp.head(15).round(4).to_string())
-print("\nHANIYA 20 BIOMARKERS\n" + bm.to_string(index=False))
+print("\nDE BIOMARKER CANDIDATES (20)\n" + bm.to_string(index=False))
 print("\nOVERLAPS\n" + ov_df.to_string(index=False))
-print("\nNEW (LR top50 not in Haniya top50)\n" + new_df.round(3).to_string(index=False))
+print("\nNEW (LR top50 not in statistical top50)\n" + new_df.round(3).to_string(index=False))
 print("\nPAM50 COUNTS\n" + "\n".join(f"  {k}: {v}" for k, v in pam_counts.items()))
 print("  LR top50 PAM50 genes:", sorted(pam.loc[pam.in_LR_top50, "dataset_column"]))
 print("  RF top50 PAM50 genes:", sorted(pam.loc[pam.in_RF_top50, "dataset_column"]))

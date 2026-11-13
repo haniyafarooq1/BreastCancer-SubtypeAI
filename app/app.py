@@ -68,13 +68,6 @@ st.info("**Basal-like ≠ triple-negative (TNBC).** *Basal* is a gene-expression
         "overlap substantially but are not the same group of patients, so this app never labels a "
         "prediction as TNBC.")
 
-st.subheader("Team")
-st.markdown("""
-- **Member 1: Haniya**, bioinformatics & data preparation (data cleaning, EDA, differential expression,
-  biomarker candidates, train/test split)
-- **Member 2: Aima Aftab**, machine learning, explainability & Streamlit frontend
-""")
-
 st.subheader("Pages")
 st.markdown("""
 1. **Dataset Analysis**: subtype distribution, expression distribution, PCA, biomarker heatmap, DE tables

@@ -5,10 +5,10 @@ from pathlib import Path
 # Repository root (this file lives in <root>/ml/config.py)
 ROOT = Path(__file__).resolve().parents[1]
 
-# ---- Input data (Haniya's outputs; read-only) ----
+# ---- Input data (outputs of the existing preprocessing pipeline; read-only) ----
 PRIMARY_CSV = ROOT / "data" / "processed" / "primary_dataset.csv"
 SPLIT_MANIFEST = ROOT / "data" / "processed" / "ml" / "ml_split_manifest.csv"
-HANIYA_RESULTS = ROOT / "results"
+EXISTING_RESULTS = ROOT / "results"
 
 # ---- Cache folder (parquet copy of the dataset + pipeline cache during training) ----
 # Order: BC_CACHE_DIR env var -> C:\bc_cache (Windows) or ~/.cache/bcsubtype (macOS/Linux)
@@ -56,9 +56,9 @@ RANDOM_STATE = 42
 CV_FOLDS = 5
 SCORING = "f1_macro"
 
-# Haniya's 20 exploratory biomarker candidates (results/analysis_summary.md, section 6).
+# The 20 exploratory biomarker candidates from the differential-expression analysis (results/analysis_summary.md, section 6).
 # Computed on the FULL dataset -> comparison only, never used for feature selection.
-HANIYA_BIOMARKERS = [
+DE_BIOMARKER_CANDIDATES = [
     "FOXC1", "FOXA1", "ESR1", "GATA3", "MLPH", "SPDEF", "AR", "ABCC11", "SOX10", "KRT5",
     "KRT14", "FOXM1", "UBE2C", "BIRC5", "AURKA", "PTTG1", "MYBL2", "RRM2", "BCL2", "XBP1",
 ]

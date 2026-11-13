@@ -1,4 +1,4 @@
-gene,LR_rank,LR_subtype_most_important,LR_direction,Haniya_effect_rank,Haniya_max_abs_effect,Haniya_kw_significant,in_PAM50
+gene,LR_rank,LR_subtype_most_important,LR_direction,statistical_rank,statistical_max_abs_effect,kruskal_wallis_significant,in_PAM50
 NAT1,1,LumA,up,78,0.9528273,True,True
 SLC39A6,2,Her2,down,68,0.9551238,True,True
 ERBB2,3,Her2,up,1764,0.795964,True,True

@@ -69,14 +69,15 @@ KernelExplainer was skipped (too slow). Permutation importance was **skipped**: 
 scoring of the calibrated SVC takes 0.70 s, so 500 genes × 5 repeats was estimated at
 ≈29 min, over the 10-minute budget.
 
-## 4. Comparison with the statistical analysis (Haniya)
-Haniya's results were computed on the full dataset (train + test), so they are used here for
-comparison only. For her ranking, each gene is ranked by its maximum |rank-biserial effect size|
-over the 10 pairwise comparisons in `results/biomarker_candidates/`. Her Kruskal-Wallis table
+## 4. Comparison with the statistical analysis
+The differential-expression results were computed on the full dataset (train + test), so they are
+used here for comparison only. For the **statistical rank**, each gene is ranked by its maximum
+|rank-biserial effect size| over the 10 pairwise comparisons in `results/biomarker_candidates/`.
+The Kruskal-Wallis table
 cannot be ranked by p-value because all adjusted p-values are 0.0, so the H statistic is used
 as a check.
 
-**20 biomarker candidates** (`haniya_biomarkers_vs_ml.csv`):
+**20 biomarker candidates from the differential-expression analysis** (`biomarker_candidates_vs_ml.csv`):
 - All 20 are in the training top-5000 variance genes and all 20 are selected by LR's SelectKBest.
 - 17 of 20 are selected by RF's SelectKBest. ABCC11, MYBL2 and RRM2 are not; RF uses k=500.
 - 4 are in the LR top 50: ESR1 (#14), BIRC5 (#34), PTTG1 (#36), BCL2 (#45).
@@ -86,23 +87,23 @@ as a check.
 
 | Comparison | Overlap |
 |---|---|
-| LR top 50 ∩ Haniya top 50 (max effect) | **5** (ESR1, KRT17, MAPT, MGC4836, TBC1D9) |
-| RF top 50 ∩ Haniya top 50 (max effect) | **25** |
-| LR top 50 ∩ Haniya top 50 (Kruskal H) | 4 (BIRC5, ESR1, PTTG1, TBC1D9) |
+| LR top 50 ∩ statistical top 50 (max effect) | **5** (ESR1, KRT17, MAPT, MGC4836, TBC1D9) |
+| RF top 50 ∩ statistical top 50 (max effect) | **25** |
+| LR top 50 ∩ statistical top 50 (Kruskal H) | 4 (BIRC5, ESR1, PTTG1, TBC1D9) |
 | LR top 50 ∩ RF top 50 | 9 |
 
-Why the LR overlap is low: Haniya's top 50 is dominated by the most extreme pairwise contrasts,
+Why the LR overlap is low: the statistical top 50 is dominated by the most extreme pairwise contrasts,
 Basal vs LumA (25 genes) and LumB vs Normal (22 genes), with |effect| between 0.96 and 0.99.
 Those classes are already easy for the model. The LR top 50 is mostly about the *hard*
 boundaries: by most-affected subtype it splits 19 LumA, 17 LumB, 8 Her2, 5 Normal and only 1
 Basal.
 
-**"New" genes:** 45 genes are in the LR top 50 but not in Haniya's top 50
-(`new_ml_genes_not_in_haniya_top50.csv`). None are new in a statistical sense: all 45 are
-significant in her Kruskal-Wallis test. They are ranked lower by single-gene effect size
-(median rank 961). Examples include ERBB2 (her rank 1,764) and GRB7 (7,107): they mark only
+**"New" genes:** 45 genes are in the LR top 50 but not in the statistical top 50
+(`new_ml_genes_not_in_statistical_top50.csv`). None are new in a statistical sense: all 45 are
+significant in the Kruskal-Wallis test. They are ranked lower by single-gene effect size
+(median rank 961). Examples include ERBB2 (statistical rank 1,764) and GRB7 (7,107): they mark only
 the Her2 subtype, so their maximum pairwise effect is moderate, but they are essential to the
-multi-class model. 12 of the 45 are PAM50 genes. Genes that are neither PAM50 nor in her top 50
+multi-class model. 12 of the 45 are PAM50 genes. Genes that are neither PAM50 nor in the statistical top 50
 (e.g. BPI, CRIP1, PKIB, TSPAN1, SEMA6D, MMP1, IL17B, DSG3) are exploratory leads only.
 
 ## 5. PAM50 check (Parker et al., J Clin Oncol 2009)
@@ -116,7 +117,7 @@ All 50 PAM50 genes are present under their current names (ORC6, NDC80, NUF2; no 
 | In LR top 50 | **15** (BCL2, BIRC5, CDH3, ERBB2, ESR1, GRB7, KRT17, MAPT, NAT1, NUF2, PGR, PTTG1, SLC39A6, TMEM45B, UBE2T) |
 | Selected by RF (k=500) | 38 |
 | In RF top 50 | **16** (BCL2, BIRC5, ERBB2, ESR1, FOXA1, FOXC1, KRT14, KRT17, KRT5, MIA, MLPH, NAT1, PTTG1, SFRP1, SLC39A6, UBE2C) |
-| In Haniya top 50 | 11 |
+| In statistical top 50 | 11 |
 
 If 50 genes were drawn at random from the 1,000 LR features, about 2 would be PAM50 genes. The
 observed 15 is about 7× that. The 9 PAM50 genes removed by the variance pre-filter vary little

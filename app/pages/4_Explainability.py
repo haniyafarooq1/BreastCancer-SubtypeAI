@@ -79,20 +79,21 @@ with t2:
     st.caption("SVC: KernelExplainer was skipped as too slow, and test-set permutation importance was "
                "skipped because it was estimated at about 29 minutes.")
 
-# ------------------------------------------------------------------ Haniya comparison
+# ------------------------------------------------------------------ comparison with the statistical analysis
 with t3:
-    st.markdown("Haniya's statistical analysis used the **full dataset**, so it is used here only for "
-                "comparison, never for model training. Her genes are ranked by the maximum |rank-biserial "
-                "effect size| over the 10 pairwise subtype comparisons.")
-    st.subheader("Haniya's 20 biomarker candidates in the models")
-    bm = cm.table_or_info(E / "haniya_biomarkers_vs_ml.csv")
+    st.markdown("The statistical (differential-expression) analysis used the **full dataset**, so it is used "
+                "here only for comparison, never for model training. The **statistical rank** orders genes by "
+                "their maximum |rank-biserial effect size| over the 10 pairwise subtype comparisons.")
+    st.subheader("The 20 biomarker candidates from the differential-expression analysis")
+    bm = cm.table_or_info(E / "biomarker_candidates_vs_ml.csv")
     if bm is not None:
         show = bm.rename(columns={
             "in_train_top5000_variance": "top-5000 var", "selected_by_LR_SelectKBest_k1000": "LR selected",
             "LR_shap_rank_of_1000": "LR rank /1000", "LR_subtype_most_important": "LR subtype",
             "LR_direction_in_that_subtype": "LR dir", "selected_by_RF_SelectKBest_k500": "RF selected",
             "RF_shap_rank_of_500": "RF SHAP rank /500", "RF_mdi_rank_of_500": "RF MDI rank",
-            "Haniya_effect_rank": "Haniya rank", "Haniya_max_effect_comparison": "Haniya strongest contrast",
+            "statistical_rank": "Statistical rank",
+            "statistical_strongest_contrast": "Strongest contrast (statistical)",
             "in_LR_top50": "LR top 50", "in_RF_top50": "RF top 50"})
         st.dataframe(show, hide_index=True, width="stretch")
         st.caption("All 20 pass the variance filter and are selected by LR; 17/20 are selected by RF. "
@@ -102,16 +103,17 @@ with t3:
     if ov is not None:
         st.dataframe(ov, hide_index=True, width="stretch")
     st.markdown("""
-**Why the LR overlap is low (5/50) while RF's is high (25/50):** Haniya's top 50 is dominated by the most extreme
-pairwise contrasts, *Basal vs LumA* (25 genes) and *LumB vs Normal* (22). These are the easy boundaries. The LR
+**Why the LR overlap is low (5/50) while RF's is high (25/50):** the statistical top 50 is dominated by the most
+extreme pairwise contrasts, *Basal vs LumA* (25 genes) and *LumB vs Normal* (22). These are the easy boundaries. The LR
 top 50 focuses on the hard ones: 19 genes matter most for LumA, 17 for LumB, 8 for Her2, 5 for Normal and only
 1 for Basal.
 """)
-    new = cm.read_csv(str(E / "new_ml_genes_not_in_haniya_top50.csv"))
+    new = cm.read_csv(str(E / "new_ml_genes_not_in_statistical_top50.csv"))
     if new is not None:
-        with st.expander(f"{len(new)} genes in the LR top 50 but not in Haniya's top 50"):
+        with st.expander(f"{len(new)} genes in the LR top 50 but not in the statistical top 50"):
             st.dataframe(new, hide_index=True, width="stretch")
-            st.caption("None are statistically new: all are significant in her Kruskal–Wallis test, just ranked "
+            st.caption("None are statistically new: all are significant in the Kruskal–Wallis test of the "
+                       "differential-expression analysis, just ranked "
                        "lower by single-gene effect size (median rank 961). ERBB2 and GRB7 mark only Her2, so "
                        "their maximum pairwise effect is moderate, yet they are key for a multi-class model.")
 

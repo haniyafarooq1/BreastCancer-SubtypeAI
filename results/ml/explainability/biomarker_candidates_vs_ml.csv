@@ -1,4 +1,4 @@
-gene,in_train_top5000_variance,selected_by_LR_SelectKBest_k1000,LR_shap_rank_of_1000,LR_subtype_most_important,LR_direction_in_that_subtype,selected_by_RF_SelectKBest_k500,RF_shap_rank_of_500,RF_mdi_rank_of_500,Haniya_effect_rank,Haniya_max_effect_comparison,in_LR_top50,in_RF_top50
+gene,in_train_top5000_variance,selected_by_LR_SelectKBest_k1000,LR_shap_rank_of_1000,LR_subtype_most_important,LR_direction_in_that_subtype,selected_by_RF_SelectKBest_k500,RF_shap_rank_of_500,RF_mdi_rank_of_500,statistical_rank,statistical_strongest_contrast,in_LR_top50,in_RF_top50
 FOXC1,True,True,140,LumB,down,True,18.0,9.0,32,Basal_vs_LumB,False,True
 FOXA1,True,True,582,LumA,up,True,3.0,2.0,6,Basal_vs_LumA,False,True
 ESR1,True,True,14,LumB,up,True,1.0,1.0,17,Basal_vs_LumB,True,True

@@ -2,7 +2,8 @@
 
 This document covers the machine-learning part of the project: subtype classifiers, explainability,
 and the Streamlit app. Data preparation, EDA, differential expression and the train/test split are
-in `notebooks/01`–`15` and `results/` (Haniya). Those files are used as input here and are not modified.
+in the existing preprocessing pipeline (`notebooks/01`–`15`, outputs in `results/`). Those files are used as
+input here and are not modified.
 
 > ⚠️ **Research/educational tool. Not for clinical diagnosis.**
 
@@ -41,9 +42,9 @@ python app/tests/test_app_smoke.py       # automated smoke test, about 30 s, pri
 ```
 
 ### Re-running the ML pipeline (dataset needed)
-The scripts need `data/processed/primary_dataset.csv` (about 1.8 GB, gitignored). Either copy it
-from a teammate into that folder, or regenerate it with Haniya's scripts `notebooks/01`–`08`, which
-need the raw GEO file in `data/raw/`. The split manifest `data/processed/ml/ml_split_manifest.csv`
+The scripts need `data/processed/primary_dataset.csv` (about 1.8 GB, gitignored). Either place an
+existing copy of the file in that folder, or regenerate it with the existing preprocessing scripts
+`notebooks/01`–`08`, which need the raw GEO file in `data/raw/`. The split manifest `data/processed/ml/ml_split_manifest.csv`
 is in the repository.
 
 **Cache folder.** The first run writes a float32 parquet copy of the dataset (about 400 MB). It
@@ -67,7 +68,7 @@ Run from the repository root with the venv active.
 | 3 | `python ml/02_train_cv.py` | 5-fold GridSearchCV for LR / SVC / RF on the **training set only**; per-class CV F1; refit on the full training set; save models | `results/ml/cv/*`, `models/*_pipeline.joblib`, `models/*.json` | ~12 min |
 | 4 | `python ml/02b_grid_extension.py` | Grid extensions for best values on the grid edge (SVC C=100, k=250; RF k=250); re-saves a model only if its best params change | updated `results/ml/cv/*`, `models/svc_pipeline.joblib` | 3–15 min |
 | 5 | `python ml/03_evaluate.py` | **One-time** test-set evaluation of the 3 saved models (no fitting). Refuses to run again unless `--force` | `results/ml/evaluation/*`, `models/best_model.json` | ~30 s |
-| 6 | `python ml/04_explain.py` | LR coefficients + SHAP, RF SHAP + MDI, comparison with Haniya's biomarkers, PAM50 check | `results/ml/explainability/*` | ~30 s |
+| 6 | `python ml/04_explain.py` | LR coefficients + SHAP, RF SHAP + MDI, comparison with the DE biomarker candidates, PAM50 check | `results/ml/explainability/*` | ~30 s |
 | 7 | `python ml/05_prepare_app_assets.py` | App assets (training-set gene medians/percentiles, SHAP baseline, demo file); verifies that "only used genes" input gives the same predictions as the full input | `models/train_gene_stats.csv.gz`, `models/lr_shap_background_mean.npy`, `app/sample_input/demo_samples.csv`, `results/ml/app_checks/*` | ~1 min |
 
 \*Measured on the development laptop (8 GB RAM). The model-selection rule
@@ -95,8 +96,8 @@ on the training part of every CV fold:
 3. `SelectKBest(f_classif, k)` with k tuned in {250, 500, 1000, 2000}
 4. Classifier with `class_weight="balanced"`
 
-The test set was not used for feature selection, scaling or tuning. Haniya's biomarker results
-(computed on the full dataset) were used only for comparison, never for feature selection.
+The test set was not used for feature selection, scaling or tuning. The biomarker candidates from the
+differential-expression analysis (computed on the full dataset) were used only for comparison, never for feature selection.
 
 **Tuning.** `StratifiedKFold(5, shuffle=True, random_state=42)`, `GridSearchCV` with
 `scoring = {f1_macro, balanced_accuracy, accuracy}` and `refit="f1_macro"`.
@@ -186,13 +187,13 @@ Almost all Basal signal is in the "sum of other features" term, so single-gene L
 are not informative. The RF view shows the classic markers instead: ESR1, FOXA1, SFRP1, KRT5,
 KRT14, FOXC1, MLPH, SPDEF.
 
-**Comparison with Haniya's statistics.**
-- All 20 biomarker candidates pass the variance filter and are selected by LR; 17/20 are selected by RF.
+**Comparison with the statistical analysis.**
+- All 20 biomarker candidates from the differential-expression analysis pass the variance filter and are selected by LR; 17/20 are selected by RF.
 - 4 are in the LR top 50 (ESR1, BIRC5, PTTG1, BCL2) and 15 are in the RF top 50.
-- Top-50 overlap with her effect-size ranking: **LR 5/50, RF 25/50** (≈0.09 expected by chance).
-- LR overlaps little because her top 50 comes from the easiest contrasts (Basal vs LumA,
+- Top-50 overlap with the statistical (effect-size) ranking: **LR 5/50, RF 25/50** (≈0.09 expected by chance).
+- LR overlaps little because the statistical top 50 comes from the easiest contrasts (Basal vs LumA,
   LumB vs Normal). The LR top 50 targets the hard LumA/LumB/Her2/Normal boundaries.
-- The 45 "new" LR genes are all significant in her Kruskal–Wallis test, just ranked lower.
+- The 45 "new" LR genes are all significant in the Kruskal–Wallis test, just ranked lower.
 
 **PAM50 check** (Parker et al., *J Clin Oncol* 2009):
 - All 50 PAM50 genes are in the data; 41 pass the variance filter.
@@ -206,7 +207,7 @@ KRT14, FOXC1, MLPH, SPDEF.
 | Page | Content |
 |---|---|
 | Home (`app.py`) | Objective, dataset, pipeline, headline results, team, Basal ≠ TNBC note |
-| 1 Dataset Analysis | Haniya's EDA plots (subtype distribution, expression distribution, PCA, heatmap) and DE tables |
+| 1 Dataset Analysis | Existing EDA plots (subtype distribution, expression distribution, PCA, heatmap) and DE tables |
 | 2 Model Comparison | Test metrics, CV vs test, per-class F1, confusion matrices, selection rule |
 | 3 Subtype Prediction | Upload a CSV or use demo samples; predicted subtype, probabilities, per-sample LR SHAP; CSV download |
 | 4 Explainability | LR SHAP/coefficients, RF markers, Basal caveat, biomarker/PAM50 comparison |

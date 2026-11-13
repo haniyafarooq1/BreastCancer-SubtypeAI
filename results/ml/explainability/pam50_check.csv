@@ -1,4 +1,4 @@
-pam50_gene,dataset_column,in_dataset,in_train_top5000_variance,selected_LR_k1000,LR_rank,in_LR_top50,selected_RF_k500,RF_shap_rank,in_RF_top50,in_Haniya_top50
+pam50_gene,dataset_column,in_dataset,in_train_top5000_variance,selected_LR_k1000,LR_rank,in_LR_top50,selected_RF_k500,RF_shap_rank,in_RF_top50,in_statistical_top50
 ACTR3B,ACTR3B,True,False,False,,False,False,,False,False
 ANLN,ANLN,True,True,True,85.0,False,True,210.0,False,False
 BAG1,BAG1,True,False,False,,False,False,,False,False

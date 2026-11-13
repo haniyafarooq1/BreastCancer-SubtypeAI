@@ -7,7 +7,8 @@ import streamlit as st  # noqa: E402
 
 cm.setup_page("Dataset Analysis", "📊")
 st.title("📊 Dataset Analysis")
-st.caption("Exploratory analysis by Haniya (scripts `notebooks/09`–`13`). Plots and tables are loaded from "
+st.caption("Results of the exploratory analysis in the existing preprocessing pipeline (scripts "
+           "`notebooks/09`–`13`). Plots and tables are loaded from "
            "`results/`, not recomputed. Note: these analyses used the full dataset (train + test); they are "
            "descriptive and were not used for model training or feature selection.")
 
@@ -60,6 +61,6 @@ with t5:
         st.info("Pairwise result files not found in `results/biomarker_candidates/`.")
     summ = cm.read_text(str(R / "analysis_summary.md"))
     if summ:
-        with st.expander("Haniya's full analysis summary (results/analysis_summary.md)"):
+        with st.expander("Full data-analysis summary (results/analysis_summary.md)"):
             st.markdown(summ)
 cm.footer()
