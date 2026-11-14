@@ -1,0 +1,342 @@
+
+[2026-11-12 21:50:57] ######################################################################
+[2026-11-12 21:50:57] PHASE 3 TRAINING RUN  (sklearn 1.6.1)
+[2026-11-12 21:50:57] ######################################################################
+[2026-11-12 21:51:00] Loaded parquet cache C:\bc_cache\primary_dataset.parquet in 2.9s
+[2026-11-12 21:51:01] X_train (2618, 30865), classes ['Basal', 'Her2', 'LumA', 'LumB', 'Normal']; test set NOT loaded
+
+[2026-11-12 21:51:01] ======================================================================
+[2026-11-12 21:51:01] MODEL: logreg
+[2026-11-12 21:51:01] ======================================================================
+[2026-11-12 21:51:01] 12 combos x 5 folds = 60 fits (+1 refit)
+[2026-11-12 21:51:01] Fitting 5 folds for each of 12 candidates, totalling 60 fits
+[2026-11-12 21:51:03] [CV 1/5] END model__C=0.001, select__k=500; accuracy: (test=0.868) balanced_accuracy: (test=0.885) f1_macro: (test=0.841) total time=   2.5s
+[2026-11-12 21:51:05] [CV 2/5] END model__C=0.001, select__k=500; accuracy: (test=0.855) balanced_accuracy: (test=0.878) f1_macro: (test=0.832) total time=   1.8s
+[2026-11-12 21:51:27] [CV 3/5] END model__C=0.001, select__k=500; accuracy: (test=0.880) balanced_accuracy: (test=0.896) f1_macro: (test=0.856) total time=  21.1s
+[2026-11-12 21:51:33] [CV 4/5] END model__C=0.001, select__k=500; accuracy: (test=0.881) balanced_accuracy: (test=0.905) f1_macro: (test=0.860) total time=   6.4s
+[2026-11-12 21:51:36] [CV 5/5] END model__C=0.001, select__k=500; accuracy: (test=0.878) balanced_accuracy: (test=0.883) f1_macro: (test=0.842) total time=   3.0s
+[2026-11-12 21:51:38] [CV 1/5] END model__C=0.001, select__k=1000; accuracy: (test=0.870) balanced_accuracy: (test=0.889) f1_macro: (test=0.844) total time=   2.0s
+[2026-11-12 21:51:40] [CV 2/5] END model__C=0.001, select__k=1000; accuracy: (test=0.861) balanced_accuracy: (test=0.891) f1_macro: (test=0.840) total time=   1.7s
+[2026-11-12 21:51:42] [CV 3/5] END model__C=0.001, select__k=1000; accuracy: (test=0.885) balanced_accuracy: (test=0.897) f1_macro: (test=0.861) total time=   1.4s
+[2026-11-12 21:51:43] [CV 4/5] END model__C=0.001, select__k=1000; accuracy: (test=0.881) balanced_accuracy: (test=0.899) f1_macro: (test=0.858) total time=   1.5s
+[2026-11-12 21:51:45] [CV 5/5] END model__C=0.001, select__k=1000; accuracy: (test=0.883) balanced_accuracy: (test=0.889) f1_macro: (test=0.852) total time=   1.4s
+[2026-11-12 21:51:47] [CV 1/5] END model__C=0.001, select__k=2000; accuracy: (test=0.865) balanced_accuracy: (test=0.881) f1_macro: (test=0.839) total time=   2.2s
+[2026-11-12 21:51:50] [CV 2/5] END model__C=0.001, select__k=2000; accuracy: (test=0.866) balanced_accuracy: (test=0.885) f1_macro: (test=0.842) total time=   2.7s
+[2026-11-12 21:51:52] [CV 3/5] END model__C=0.001, select__k=2000; accuracy: (test=0.891) balanced_accuracy: (test=0.900) f1_macro: (test=0.865) total time=   2.2s
+[2026-11-12 21:51:55] [CV 4/5] END model__C=0.001, select__k=2000; accuracy: (test=0.895) balanced_accuracy: (test=0.897) f1_macro: (test=0.871) total time=   2.5s
+[2026-11-12 21:51:58] [CV 5/5] END model__C=0.001, select__k=2000; accuracy: (test=0.887) balanced_accuracy: (test=0.895) f1_macro: (test=0.860) total time=   2.7s
+[2026-11-12 21:51:59] [CV 1/5] END model__C=0.01, select__k=500; accuracy: (test=0.885) balanced_accuracy: (test=0.900) f1_macro: (test=0.861) total time=   1.2s
+[2026-11-12 21:52:01] [CV 2/5] END model__C=0.01, select__k=500; accuracy: (test=0.895) balanced_accuracy: (test=0.911) f1_macro: (test=0.877) total time=   1.4s
+[2026-11-12 21:52:02] [CV 3/5] END model__C=0.01, select__k=500; accuracy: (test=0.901) balanced_accuracy: (test=0.899) f1_macro: (test=0.875) total time=   1.4s
+[2026-11-12 21:52:04] [CV 4/5] END model__C=0.01, select__k=500; accuracy: (test=0.899) balanced_accuracy: (test=0.904) f1_macro: (test=0.875) total time=   1.5s
+[2026-11-12 21:52:06] [CV 5/5] END model__C=0.01, select__k=500; accuracy: (test=0.897) balanced_accuracy: (test=0.892) f1_macro: (test=0.866) total time=   1.6s
+[2026-11-12 21:52:08] [CV 1/5] END model__C=0.01, select__k=1000; accuracy: (test=0.893) balanced_accuracy: (test=0.891) f1_macro: (test=0.865) total time=   2.0s
+[2026-11-12 21:52:10] [CV 2/5] END model__C=0.01, select__k=1000; accuracy: (test=0.893) balanced_accuracy: (test=0.900) f1_macro: (test=0.873) total time=   2.0s
+[2026-11-12 21:52:12] [CV 3/5] END model__C=0.01, select__k=1000; accuracy: (test=0.908) balanced_accuracy: (test=0.905) f1_macro: (test=0.886) total time=   1.8s
+[2026-11-12 21:52:14] [CV 4/5] END model__C=0.01, select__k=1000; accuracy: (test=0.893) balanced_accuracy: (test=0.877) f1_macro: (test=0.864) total time=   2.0s
+[2026-11-12 21:52:16] [CV 5/5] END model__C=0.01, select__k=1000; accuracy: (test=0.902) balanced_accuracy: (test=0.892) f1_macro: (test=0.877) total time=   2.0s
+[2026-11-12 21:52:19] [CV 1/5] END model__C=0.01, select__k=2000; accuracy: (test=0.889) balanced_accuracy: (test=0.867) f1_macro: (test=0.856) total time=   2.7s
+[2026-11-12 21:52:22] [CV 2/5] END model__C=0.01, select__k=2000; accuracy: (test=0.891) balanced_accuracy: (test=0.879) f1_macro: (test=0.860) total time=   3.5s
+[2026-11-12 21:52:25] [CV 3/5] END model__C=0.01, select__k=2000; accuracy: (test=0.916) balanced_accuracy: (test=0.893) f1_macro: (test=0.889) total time=   2.9s
+[2026-11-12 21:52:29] [CV 4/5] END model__C=0.01, select__k=2000; accuracy: (test=0.897) balanced_accuracy: (test=0.875) f1_macro: (test=0.867) total time=   3.1s
+[2026-11-12 21:52:32] [CV 5/5] END model__C=0.01, select__k=2000; accuracy: (test=0.893) balanced_accuracy: (test=0.876) f1_macro: (test=0.863) total time=   3.4s
+[2026-11-12 21:52:33] [CV 1/5] END model__C=0.1, select__k=500; accuracy: (test=0.895) balanced_accuracy: (test=0.886) f1_macro: (test=0.871) total time=   1.3s
+[2026-11-12 21:52:35] [CV 2/5] END model__C=0.1, select__k=500; accuracy: (test=0.893) balanced_accuracy: (test=0.888) f1_macro: (test=0.871) total time=   1.4s
+[2026-11-12 21:52:36] [CV 3/5] END model__C=0.1, select__k=500; accuracy: (test=0.908) balanced_accuracy: (test=0.893) f1_macro: (test=0.882) total time=   1.2s
+[2026-11-12 21:52:38] [CV 4/5] END model__C=0.1, select__k=500; accuracy: (test=0.901) balanced_accuracy: (test=0.874) f1_macro: (test=0.865) total time=   1.2s
+[2026-11-12 21:52:39] [CV 5/5] END model__C=0.1, select__k=500; accuracy: (test=0.906) balanced_accuracy: (test=0.895) f1_macro: (test=0.885) total time=   1.5s
+[2026-11-12 21:52:41] [CV 1/5] END model__C=0.1, select__k=1000; accuracy: (test=0.891) balanced_accuracy: (test=0.875) f1_macro: (test=0.863) total time=   1.5s
+[2026-11-12 21:52:43] [CV 2/5] END model__C=0.1, select__k=1000; accuracy: (test=0.906) balanced_accuracy: (test=0.903) f1_macro: (test=0.890) total time=   1.6s
+[2026-11-12 21:52:44] [CV 3/5] END model__C=0.1, select__k=1000; accuracy: (test=0.914) balanced_accuracy: (test=0.898) f1_macro: (test=0.891) total time=   1.6s
+[2026-11-12 21:52:46] [CV 4/5] END model__C=0.1, select__k=1000; accuracy: (test=0.908) balanced_accuracy: (test=0.879) f1_macro: (test=0.882) total time=   1.4s
+[2026-11-12 21:52:48] [CV 5/5] END model__C=0.1, select__k=1000; accuracy: (test=0.899) balanced_accuracy: (test=0.890) f1_macro: (test=0.884) total time=   1.7s
+[2026-11-12 21:52:50] [CV 1/5] END model__C=0.1, select__k=2000; accuracy: (test=0.889) balanced_accuracy: (test=0.859) f1_macro: (test=0.856) total time=   1.8s
+[2026-11-12 21:52:52] [CV 2/5] END model__C=0.1, select__k=2000; accuracy: (test=0.893) balanced_accuracy: (test=0.878) f1_macro: (test=0.863) total time=   1.9s
+[2026-11-12 21:52:54] [CV 3/5] END model__C=0.1, select__k=2000; accuracy: (test=0.908) balanced_accuracy: (test=0.881) f1_macro: (test=0.882) total time=   2.7s
+[2026-11-12 21:52:56] [CV 4/5] END model__C=0.1, select__k=2000; accuracy: (test=0.901) balanced_accuracy: (test=0.868) f1_macro: (test=0.873) total time=   2.0s
+[2026-11-12 21:52:59] [CV 5/5] END model__C=0.1, select__k=2000; accuracy: (test=0.899) balanced_accuracy: (test=0.877) f1_macro: (test=0.871) total time=   2.1s
+[2026-11-12 21:53:00] [CV 1/5] END model__C=1, select__k=500; accuracy: (test=0.903) balanced_accuracy: (test=0.890) f1_macro: (test=0.886) total time=   1.2s
+[2026-11-12 21:53:01] [CV 2/5] END model__C=1, select__k=500; accuracy: (test=0.884) balanced_accuracy: (test=0.875) f1_macro: (test=0.866) total time=   1.1s
+[2026-11-12 21:53:03] [CV 3/5] END model__C=1, select__k=500; accuracy: (test=0.899) balanced_accuracy: (test=0.862) f1_macro: (test=0.867) total time=   1.2s
+[2026-11-12 21:53:04] [CV 4/5] END model__C=1, select__k=500; accuracy: (test=0.908) balanced_accuracy: (test=0.885) f1_macro: (test=0.880) total time=   1.1s
+[2026-11-12 21:53:05] [CV 5/5] END model__C=1, select__k=500; accuracy: (test=0.910) balanced_accuracy: (test=0.895) f1_macro: (test=0.890) total time=   1.1s
+[2026-11-12 21:53:07] [CV 1/5] END model__C=1, select__k=1000; accuracy: (test=0.895) balanced_accuracy: (test=0.882) f1_macro: (test=0.869) total time=   1.4s
+[2026-11-12 21:53:08] [CV 2/5] END model__C=1, select__k=1000; accuracy: (test=0.895) balanced_accuracy: (test=0.891) f1_macro: (test=0.880) total time=   1.3s
+[2026-11-12 21:53:09] [CV 3/5] END model__C=1, select__k=1000; accuracy: (test=0.908) balanced_accuracy: (test=0.884) f1_macro: (test=0.882) total time=   1.3s
+[2026-11-12 21:53:11] [CV 4/5] END model__C=1, select__k=1000; accuracy: (test=0.904) balanced_accuracy: (test=0.872) f1_macro: (test=0.875) total time=   1.3s
+[2026-11-12 21:53:12] [CV 5/5] END model__C=1, select__k=1000; accuracy: (test=0.899) balanced_accuracy: (test=0.894) f1_macro: (test=0.887) total time=   1.4s
+[2026-11-12 21:53:14] [CV 1/5] END model__C=1, select__k=2000; accuracy: (test=0.882) balanced_accuracy: (test=0.853) f1_macro: (test=0.855) total time=   1.9s
+[2026-11-12 21:53:16] [CV 2/5] END model__C=1, select__k=2000; accuracy: (test=0.885) balanced_accuracy: (test=0.864) f1_macro: (test=0.854) total time=   1.9s
+[2026-11-12 21:53:18] [CV 3/5] END model__C=1, select__k=2000; accuracy: (test=0.889) balanced_accuracy: (test=0.857) f1_macro: (test=0.856) total time=   1.7s
+[2026-11-12 21:53:20] [CV 4/5] END model__C=1, select__k=2000; accuracy: (test=0.901) balanced_accuracy: (test=0.869) f1_macro: (test=0.873) total time=   2.0s
+[2026-11-12 21:53:22] [CV 5/5] END model__C=1, select__k=2000; accuracy: (test=0.902) balanced_accuracy: (test=0.887) f1_macro: (test=0.877) total time=   2.0s
+[2026-11-12 21:53:25] logreg: search done in 2.4 min | best {'model__C': 0.1, 'select__k': 1000} | macro F1 0.8819
+[2026-11-12 21:53:37] logreg: cross_val_predict done in 11s
+[2026-11-12 21:53:37] logreg: per-class CV F1 Basal=0.957, Her2=0.870, LumA=0.931, LumB=0.873, Normal=0.780
+[2026-11-12 21:53:39] logreg: predict == argmax(predict_proba): 0 mismatches / 2618
+[2026-11-12 21:53:39] logreg: saved logreg_pipeline.joblib (0.6 MB)
+
+[2026-11-12 21:53:39] ======================================================================
+[2026-11-12 21:53:39] MODEL: svc
+[2026-11-12 21:53:39] ======================================================================
+[2026-11-12 21:53:39] 15 combos x 5 folds = 75 fits (+1 refit)
+[2026-11-12 21:53:39] Fitting 5 folds for each of 15 candidates, totalling 75 fits
+[2026-11-12 21:53:40] [CV 1/5] END model__C=0.001, model__kernel=linear, select__k=500; accuracy: (test=0.868) balanced_accuracy: (test=0.884) f1_macro: (test=0.842) total time=   1.0s
+[2026-11-12 21:53:42] [CV 2/5] END model__C=0.001, model__kernel=linear, select__k=500; accuracy: (test=0.870) balanced_accuracy: (test=0.889) f1_macro: (test=0.849) total time=   1.0s
+[2026-11-12 21:53:43] [CV 3/5] END model__C=0.001, model__kernel=linear, select__k=500; accuracy: (test=0.887) balanced_accuracy: (test=0.897) f1_macro: (test=0.861) total time=   1.0s
+[2026-11-12 21:53:44] [CV 4/5] END model__C=0.001, model__kernel=linear, select__k=500; accuracy: (test=0.880) balanced_accuracy: (test=0.904) f1_macro: (test=0.861) total time=   1.0s
+[2026-11-12 21:53:45] [CV 5/5] END model__C=0.001, model__kernel=linear, select__k=500; accuracy: (test=0.885) balanced_accuracy: (test=0.896) f1_macro: (test=0.858) total time=   1.1s
+[2026-11-12 21:53:46] [CV 1/5] END model__C=0.001, model__kernel=linear, select__k=1000; accuracy: (test=0.865) balanced_accuracy: (test=0.880) f1_macro: (test=0.840) total time=   1.3s
+[2026-11-12 21:53:48] [CV 2/5] END model__C=0.001, model__kernel=linear, select__k=1000; accuracy: (test=0.872) balanced_accuracy: (test=0.891) f1_macro: (test=0.849) total time=   1.2s
+[2026-11-12 21:53:49] [CV 3/5] END model__C=0.001, model__kernel=linear, select__k=1000; accuracy: (test=0.893) balanced_accuracy: (test=0.895) f1_macro: (test=0.863) total time=   1.3s
+[2026-11-12 21:53:51] [CV 4/5] END model__C=0.001, model__kernel=linear, select__k=1000; accuracy: (test=0.885) balanced_accuracy: (test=0.896) f1_macro: (test=0.865) total time=   1.4s
+[2026-11-12 21:53:52] [CV 5/5] END model__C=0.001, model__kernel=linear, select__k=1000; accuracy: (test=0.889) balanced_accuracy: (test=0.887) f1_macro: (test=0.858) total time=   1.3s
+[2026-11-12 21:53:54] [CV 1/5] END model__C=0.001, model__kernel=linear, select__k=2000; accuracy: (test=0.878) balanced_accuracy: (test=0.877) f1_macro: (test=0.848) total time=   2.2s
+[2026-11-12 21:53:57] [CV 2/5] END model__C=0.001, model__kernel=linear, select__k=2000; accuracy: (test=0.893) balanced_accuracy: (test=0.902) f1_macro: (test=0.870) total time=   2.6s
+[2026-11-12 21:54:00] [CV 3/5] END model__C=0.001, model__kernel=linear, select__k=2000; accuracy: (test=0.899) balanced_accuracy: (test=0.893) f1_macro: (test=0.870) total time=   2.5s
+[2026-11-12 21:54:03] [CV 4/5] END model__C=0.001, model__kernel=linear, select__k=2000; accuracy: (test=0.897) balanced_accuracy: (test=0.894) f1_macro: (test=0.875) total time=   2.8s
+[2026-11-12 21:54:05] [CV 5/5] END model__C=0.001, model__kernel=linear, select__k=2000; accuracy: (test=0.891) balanced_accuracy: (test=0.881) f1_macro: (test=0.861) total time=   2.5s
+[2026-11-12 21:54:06] [CV 1/5] END model__C=0.01, model__kernel=linear, select__k=500; accuracy: (test=0.895) balanced_accuracy: (test=0.895) f1_macro: (test=0.872) total time=   0.8s
+[2026-11-12 21:54:07] [CV 2/5] END model__C=0.01, model__kernel=linear, select__k=500; accuracy: (test=0.891) balanced_accuracy: (test=0.890) f1_macro: (test=0.872) total time=   0.8s
+[2026-11-12 21:54:08] [CV 3/5] END model__C=0.01, model__kernel=linear, select__k=500; accuracy: (test=0.897) balanced_accuracy: (test=0.865) f1_macro: (test=0.859) total time=   0.9s
+[2026-11-12 21:54:09] [CV 4/5] END model__C=0.01, model__kernel=linear, select__k=500; accuracy: (test=0.906) balanced_accuracy: (test=0.901) f1_macro: (test=0.885) total time=   0.8s
+[2026-11-12 21:54:10] [CV 5/5] END model__C=0.01, model__kernel=linear, select__k=500; accuracy: (test=0.895) balanced_accuracy: (test=0.878) f1_macro: (test=0.868) total time=   0.8s
+[2026-11-12 21:54:11] [CV 1/5] END model__C=0.01, model__kernel=linear, select__k=1000; accuracy: (test=0.891) balanced_accuracy: (test=0.882) f1_macro: (test=0.867) total time=   1.1s
+[2026-11-12 21:54:12] [CV 2/5] END model__C=0.01, model__kernel=linear, select__k=1000; accuracy: (test=0.901) balanced_accuracy: (test=0.887) f1_macro: (test=0.880) total time=   1.1s
+[2026-11-12 21:54:14] [CV 3/5] END model__C=0.01, model__kernel=linear, select__k=1000; accuracy: (test=0.914) balanced_accuracy: (test=0.881) f1_macro: (test=0.885) total time=   1.2s
+[2026-11-12 21:54:15] [CV 4/5] END model__C=0.01, model__kernel=linear, select__k=1000; accuracy: (test=0.920) balanced_accuracy: (test=0.900) f1_macro: (test=0.902) total time=   1.2s
+[2026-11-12 21:54:16] [CV 5/5] END model__C=0.01, model__kernel=linear, select__k=1000; accuracy: (test=0.897) balanced_accuracy: (test=0.881) f1_macro: (test=0.878) total time=   1.1s
+[2026-11-12 21:54:19] [CV 1/5] END model__C=0.01, model__kernel=linear, select__k=2000; accuracy: (test=0.876) balanced_accuracy: (test=0.839) f1_macro: (test=0.843) total time=   2.2s
+[2026-11-12 21:54:21] [CV 2/5] END model__C=0.01, model__kernel=linear, select__k=2000; accuracy: (test=0.893) balanced_accuracy: (test=0.864) f1_macro: (test=0.865) total time=   2.3s
+[2026-11-12 21:54:23] [CV 3/5] END model__C=0.01, model__kernel=linear, select__k=2000; accuracy: (test=0.893) balanced_accuracy: (test=0.848) f1_macro: (test=0.859) total time=   2.1s
+[2026-11-12 21:54:26] [CV 4/5] END model__C=0.01, model__kernel=linear, select__k=2000; accuracy: (test=0.904) balanced_accuracy: (test=0.879) f1_macro: (test=0.886) total time=   2.4s
+[2026-11-12 21:54:28] [CV 5/5] END model__C=0.01, model__kernel=linear, select__k=2000; accuracy: (test=0.906) balanced_accuracy: (test=0.876) f1_macro: (test=0.881) total time=   2.3s
+[2026-11-12 21:54:29] [CV 1/5] END model__C=0.1, model__kernel=linear, select__k=500; accuracy: (test=0.897) balanced_accuracy: (test=0.880) f1_macro: (test=0.879) total time=   0.8s
+[2026-11-12 21:54:30] [CV 2/5] END model__C=0.1, model__kernel=linear, select__k=500; accuracy: (test=0.876) balanced_accuracy: (test=0.852) f1_macro: (test=0.852) total time=   0.9s
+[2026-11-12 21:54:31] [CV 3/5] END model__C=0.1, model__kernel=linear, select__k=500; accuracy: (test=0.899) balanced_accuracy: (test=0.849) f1_macro: (test=0.860) total time=   1.2s
+[2026-11-12 21:54:33] [CV 4/5] END model__C=0.1, model__kernel=linear, select__k=500; accuracy: (test=0.906) balanced_accuracy: (test=0.882) f1_macro: (test=0.883) total time=   1.0s
+[2026-11-12 21:54:34] [CV 5/5] END model__C=0.1, model__kernel=linear, select__k=500; accuracy: (test=0.904) balanced_accuracy: (test=0.878) f1_macro: (test=0.885) total time=   0.9s
+[2026-11-12 21:54:35] [CV 1/5] END model__C=0.1, model__kernel=linear, select__k=1000; accuracy: (test=0.884) balanced_accuracy: (test=0.860) f1_macro: (test=0.859) total time=   1.5s
+[2026-11-12 21:54:37] [CV 2/5] END model__C=0.1, model__kernel=linear, select__k=1000; accuracy: (test=0.903) balanced_accuracy: (test=0.885) f1_macro: (test=0.883) total time=   1.3s
+[2026-11-12 21:54:38] [CV 3/5] END model__C=0.1, model__kernel=linear, select__k=1000; accuracy: (test=0.897) balanced_accuracy: (test=0.840) f1_macro: (test=0.856) total time=   1.2s
+[2026-11-12 21:54:39] [CV 4/5] END model__C=0.1, model__kernel=linear, select__k=1000; accuracy: (test=0.912) balanced_accuracy: (test=0.883) f1_macro: (test=0.890) total time=   1.2s
+[2026-11-12 21:54:41] [CV 5/5] END model__C=0.1, model__kernel=linear, select__k=1000; accuracy: (test=0.891) balanced_accuracy: (test=0.867) f1_macro: (test=0.874) total time=   1.2s
+[2026-11-12 21:54:43] [CV 1/5] END model__C=0.1, model__kernel=linear, select__k=2000; accuracy: (test=0.878) balanced_accuracy: (test=0.841) f1_macro: (test=0.845) total time=   2.1s
+[2026-11-12 21:54:45] [CV 2/5] END model__C=0.1, model__kernel=linear, select__k=2000; accuracy: (test=0.893) balanced_accuracy: (test=0.864) f1_macro: (test=0.865) total time=   2.4s
+[2026-11-12 21:54:48] [CV 3/5] END model__C=0.1, model__kernel=linear, select__k=2000; accuracy: (test=0.895) balanced_accuracy: (test=0.849) f1_macro: (test=0.862) total time=   2.7s
+[2026-11-12 21:54:51] [CV 4/5] END model__C=0.1, model__kernel=linear, select__k=2000; accuracy: (test=0.902) balanced_accuracy: (test=0.877) f1_macro: (test=0.884) total time=   2.7s
+[2026-11-12 21:54:53] [CV 5/5] END model__C=0.1, model__kernel=linear, select__k=2000; accuracy: (test=0.910) balanced_accuracy: (test=0.879) f1_macro: (test=0.887) total time=   2.4s
+[2026-11-12 21:54:55] [CV 1/5] END model__C=1, model__gamma=scale, model__kernel=rbf, select__k=500; accuracy: (test=0.878) balanced_accuracy: (test=0.888) f1_macro: (test=0.854) total time=   1.1s
+[2026-11-12 21:54:56] [CV 2/5] END model__C=1, model__gamma=scale, model__kernel=rbf, select__k=500; accuracy: (test=0.876) balanced_accuracy: (test=0.886) f1_macro: (test=0.853) total time=   1.1s
+[2026-11-12 21:54:57] [CV 3/5] END model__C=1, model__gamma=scale, model__kernel=rbf, select__k=500; accuracy: (test=0.897) balanced_accuracy: (test=0.896) f1_macro: (test=0.867) total time=   1.0s
+[2026-11-12 21:54:58] [CV 4/5] END model__C=1, model__gamma=scale, model__kernel=rbf, select__k=500; accuracy: (test=0.897) balanced_accuracy: (test=0.908) f1_macro: (test=0.881) total time=   1.2s
+[2026-11-12 21:54:59] [CV 5/5] END model__C=1, model__gamma=scale, model__kernel=rbf, select__k=500; accuracy: (test=0.895) balanced_accuracy: (test=0.889) f1_macro: (test=0.863) total time=   1.1s
+[2026-11-12 21:55:01] [CV 1/5] END model__C=1, model__gamma=scale, model__kernel=rbf, select__k=1000; accuracy: (test=0.866) balanced_accuracy: (test=0.878) f1_macro: (test=0.845) total time=   1.7s
+[2026-11-12 21:55:03] [CV 2/5] END model__C=1, model__gamma=scale, model__kernel=rbf, select__k=1000; accuracy: (test=0.870) balanced_accuracy: (test=0.890) f1_macro: (test=0.850) total time=   1.6s
+[2026-11-12 21:55:05] [CV 3/5] END model__C=1, model__gamma=scale, model__kernel=rbf, select__k=1000; accuracy: (test=0.901) balanced_accuracy: (test=0.901) f1_macro: (test=0.873) total time=   1.6s
+[2026-11-12 21:55:07] [CV 4/5] END model__C=1, model__gamma=scale, model__kernel=rbf, select__k=1000; accuracy: (test=0.881) balanced_accuracy: (test=0.879) f1_macro: (test=0.859) total time=   1.6s
+[2026-11-12 21:55:08] [CV 5/5] END model__C=1, model__gamma=scale, model__kernel=rbf, select__k=1000; accuracy: (test=0.885) balanced_accuracy: (test=0.883) f1_macro: (test=0.857) total time=   1.6s
+[2026-11-12 21:55:12] [CV 1/5] END model__C=1, model__gamma=scale, model__kernel=rbf, select__k=2000; accuracy: (test=0.847) balanced_accuracy: (test=0.862) f1_macro: (test=0.825) total time=   4.0s
+[2026-11-12 21:55:17] [CV 2/5] END model__C=1, model__gamma=scale, model__kernel=rbf, select__k=2000; accuracy: (test=0.863) balanced_accuracy: (test=0.867) f1_macro: (test=0.836) total time=   4.3s
+[2026-11-12 21:55:20] [CV 3/5] END model__C=1, model__gamma=scale, model__kernel=rbf, select__k=2000; accuracy: (test=0.882) balanced_accuracy: (test=0.882) f1_macro: (test=0.856) total time=   3.6s
+[2026-11-12 21:55:24] [CV 4/5] END model__C=1, model__gamma=scale, model__kernel=rbf, select__k=2000; accuracy: (test=0.874) balanced_accuracy: (test=0.862) f1_macro: (test=0.847) total time=   3.9s
+[2026-11-12 21:55:30] [CV 5/5] END model__C=1, model__gamma=scale, model__kernel=rbf, select__k=2000; accuracy: (test=0.881) balanced_accuracy: (test=0.886) f1_macro: (test=0.856) total time=   5.3s
+[2026-11-12 21:55:31] [CV 1/5] END model__C=10, model__gamma=scale, model__kernel=rbf, select__k=500; accuracy: (test=0.910) balanced_accuracy: (test=0.883) f1_macro: (test=0.885) total time=   1.0s
+[2026-11-12 21:55:32] [CV 2/5] END model__C=10, model__gamma=scale, model__kernel=rbf, select__k=500; accuracy: (test=0.903) balanced_accuracy: (test=0.869) f1_macro: (test=0.879) total time=   1.0s
+[2026-11-12 21:55:33] [CV 3/5] END model__C=10, model__gamma=scale, model__kernel=rbf, select__k=500; accuracy: (test=0.912) balanced_accuracy: (test=0.879) f1_macro: (test=0.882) total time=   1.0s
+[2026-11-12 21:55:35] [CV 4/5] END model__C=10, model__gamma=scale, model__kernel=rbf, select__k=500; accuracy: (test=0.920) balanced_accuracy: (test=0.882) f1_macro: (test=0.893) total time=   1.1s
+[2026-11-12 21:55:36] [CV 5/5] END model__C=10, model__gamma=scale, model__kernel=rbf, select__k=500; accuracy: (test=0.901) balanced_accuracy: (test=0.868) f1_macro: (test=0.878) total time=   1.2s
+[2026-11-12 21:55:37] [CV 1/5] END model__C=10, model__gamma=scale, model__kernel=rbf, select__k=1000; accuracy: (test=0.901) balanced_accuracy: (test=0.865) f1_macro: (test=0.871) total time=   1.4s
+[2026-11-12 21:55:39] [CV 2/5] END model__C=10, model__gamma=scale, model__kernel=rbf, select__k=1000; accuracy: (test=0.901) balanced_accuracy: (test=0.863) f1_macro: (test=0.875) total time=   1.5s
+[2026-11-12 21:55:41] [CV 3/5] END model__C=10, model__gamma=scale, model__kernel=rbf, select__k=1000; accuracy: (test=0.908) balanced_accuracy: (test=0.865) f1_macro: (test=0.878) total time=   1.5s
+[2026-11-12 21:55:42] [CV 4/5] END model__C=10, model__gamma=scale, model__kernel=rbf, select__k=1000; accuracy: (test=0.906) balanced_accuracy: (test=0.862) f1_macro: (test=0.876) total time=   1.6s
+[2026-11-12 21:55:44] [CV 5/5] END model__C=10, model__gamma=scale, model__kernel=rbf, select__k=1000; accuracy: (test=0.899) balanced_accuracy: (test=0.869) f1_macro: (test=0.875) total time=   1.4s
+[2026-11-12 21:55:47] [CV 1/5] END model__C=10, model__gamma=scale, model__kernel=rbf, select__k=2000; accuracy: (test=0.885) balanced_accuracy: (test=0.844) f1_macro: (test=0.849) total time=   3.5s
+[2026-11-12 21:55:51] [CV 2/5] END model__C=10, model__gamma=scale, model__kernel=rbf, select__k=2000; accuracy: (test=0.891) balanced_accuracy: (test=0.846) f1_macro: (test=0.858) total time=   3.4s
+[2026-11-12 21:55:55] [CV 3/5] END model__C=10, model__gamma=scale, model__kernel=rbf, select__k=2000; accuracy: (test=0.891) balanced_accuracy: (test=0.839) f1_macro: (test=0.859) total time=   3.7s
+[2026-11-12 21:55:58] [CV 4/5] END model__C=10, model__gamma=scale, model__kernel=rbf, select__k=2000; accuracy: (test=0.899) balanced_accuracy: (test=0.854) f1_macro: (test=0.872) total time=   3.6s
+[2026-11-12 21:56:04] [CV 5/5] END model__C=10, model__gamma=scale, model__kernel=rbf, select__k=2000; accuracy: (test=0.902) balanced_accuracy: (test=0.864) f1_macro: (test=0.874) total time=   5.2s
+[2026-11-12 21:56:05] svc: search done in 2.4 min | best {'model__C': 10, 'model__gamma': 'scale', 'model__kernel': 'rbf', 'select__k': 500} | macro F1 0.8833
+[2026-11-12 21:56:05] GRID-EDGE WARNING: svc: best model__C=10 is at the upper edge of [1, 10]; suggested extension: add model__C=100
+[2026-11-12 21:56:05] GRID-EDGE WARNING: svc: best select__k=500 is at the lower edge of [500, 1000, 2000]; suggested extension: add select__k=250
+[2026-11-12 21:56:25] svc: cross_val_predict done in 20s
+[2026-11-12 21:56:25] svc: per-class CV F1 Basal=0.952, Her2=0.880, LumA=0.933, LumB=0.884, Normal=0.756
+[2026-11-12 21:56:36] svc: predict == argmax(predict_proba): 0 mismatches / 2618
+[2026-11-12 21:56:37] svc: saved svc_pipeline.joblib (11.0 MB)
+
+[2026-11-12 21:56:37] ======================================================================
+[2026-11-12 21:56:37] MODEL: rf
+[2026-11-12 21:56:37] ======================================================================
+[2026-11-12 21:56:37] 6 combos x 5 folds = 30 fits (+1 refit)
+[2026-11-12 21:56:37] Fitting 5 folds for each of 6 candidates, totalling 30 fits
+[2026-11-12 21:56:45] [CV 1/5] END model__min_samples_leaf=1, select__k=500; accuracy: (test=0.882) balanced_accuracy: (test=0.805) f1_macro: (test=0.840) total time=   8.1s
+[2026-11-12 21:56:53] [CV 2/5] END model__min_samples_leaf=1, select__k=500; accuracy: (test=0.865) balanced_accuracy: (test=0.771) f1_macro: (test=0.802) total time=   7.9s
+[2026-11-12 21:57:01] [CV 3/5] END model__min_samples_leaf=1, select__k=500; accuracy: (test=0.884) balanced_accuracy: (test=0.791) f1_macro: (test=0.824) total time=   7.6s
+[2026-11-12 21:57:09] [CV 4/5] END model__min_samples_leaf=1, select__k=500; accuracy: (test=0.895) balanced_accuracy: (test=0.810) f1_macro: (test=0.842) total time=   8.2s
+[2026-11-12 21:57:17] [CV 5/5] END model__min_samples_leaf=1, select__k=500; accuracy: (test=0.862) balanced_accuracy: (test=0.764) f1_macro: (test=0.800) total time=   7.7s
+[2026-11-12 21:57:28] [CV 1/5] END model__min_samples_leaf=1, select__k=1000; accuracy: (test=0.885) balanced_accuracy: (test=0.810) f1_macro: (test=0.847) total time=  10.9s
+[2026-11-12 21:57:38] [CV 2/5] END model__min_samples_leaf=1, select__k=1000; accuracy: (test=0.863) balanced_accuracy: (test=0.768) f1_macro: (test=0.801) total time=  10.5s
+[2026-11-12 21:57:49] [CV 3/5] END model__min_samples_leaf=1, select__k=1000; accuracy: (test=0.868) balanced_accuracy: (test=0.763) f1_macro: (test=0.794) total time=  10.5s
+[2026-11-12 21:57:59] [CV 4/5] END model__min_samples_leaf=1, select__k=1000; accuracy: (test=0.889) balanced_accuracy: (test=0.798) f1_macro: (test=0.834) total time=  10.3s
+[2026-11-12 21:58:10] [CV 5/5] END model__min_samples_leaf=1, select__k=1000; accuracy: (test=0.851) balanced_accuracy: (test=0.734) f1_macro: (test=0.777) total time=  10.0s
+[2026-11-12 21:58:23] [CV 1/5] END model__min_samples_leaf=1, select__k=2000; accuracy: (test=0.878) balanced_accuracy: (test=0.802) f1_macro: (test=0.840) total time=  13.3s
+[2026-11-12 21:58:37] [CV 2/5] END model__min_samples_leaf=1, select__k=2000; accuracy: (test=0.861) balanced_accuracy: (test=0.754) f1_macro: (test=0.785) total time=  13.5s
+[2026-11-12 21:58:52] [CV 3/5] END model__min_samples_leaf=1, select__k=2000; accuracy: (test=0.868) balanced_accuracy: (test=0.764) f1_macro: (test=0.797) total time=  15.8s
+[2026-11-12 21:59:07] [CV 4/5] END model__min_samples_leaf=1, select__k=2000; accuracy: (test=0.895) balanced_accuracy: (test=0.809) f1_macro: (test=0.840) total time=  14.2s
+[2026-11-12 21:59:19] [CV 5/5] END model__min_samples_leaf=1, select__k=2000; accuracy: (test=0.862) balanced_accuracy: (test=0.755) f1_macro: (test=0.796) total time=  12.0s
+[2026-11-12 21:59:25] [CV 1/5] END model__min_samples_leaf=3, select__k=500; accuracy: (test=0.897) balanced_accuracy: (test=0.854) f1_macro: (test=0.871) total time=   6.0s
+[2026-11-12 21:59:31] [CV 2/5] END model__min_samples_leaf=3, select__k=500; accuracy: (test=0.884) balanced_accuracy: (test=0.835) f1_macro: (test=0.851) total time=   6.2s
+[2026-11-12 21:59:38] [CV 3/5] END model__min_samples_leaf=3, select__k=500; accuracy: (test=0.895) balanced_accuracy: (test=0.833) f1_macro: (test=0.857) total time=   6.2s
+[2026-11-12 21:59:44] [CV 4/5] END model__min_samples_leaf=3, select__k=500; accuracy: (test=0.906) balanced_accuracy: (test=0.846) f1_macro: (test=0.865) total time=   5.9s
+[2026-11-12 21:59:49] [CV 5/5] END model__min_samples_leaf=3, select__k=500; accuracy: (test=0.876) balanced_accuracy: (test=0.799) f1_macro: (test=0.824) total time=   5.8s
+[2026-11-12 21:59:58] [CV 1/5] END model__min_samples_leaf=3, select__k=1000; accuracy: (test=0.891) balanced_accuracy: (test=0.843) f1_macro: (test=0.862) total time=   8.0s
+[2026-11-12 22:00:06] [CV 2/5] END model__min_samples_leaf=3, select__k=1000; accuracy: (test=0.876) balanced_accuracy: (test=0.805) f1_macro: (test=0.826) total time=   8.2s
+[2026-11-12 22:00:14] [CV 3/5] END model__min_samples_leaf=3, select__k=1000; accuracy: (test=0.893) balanced_accuracy: (test=0.829) f1_macro: (test=0.852) total time=   7.9s
+[2026-11-12 22:00:22] [CV 4/5] END model__min_samples_leaf=3, select__k=1000; accuracy: (test=0.901) balanced_accuracy: (test=0.826) f1_macro: (test=0.852) total time=   7.9s
+[2026-11-12 22:00:30] [CV 5/5] END model__min_samples_leaf=3, select__k=1000; accuracy: (test=0.872) balanced_accuracy: (test=0.789) f1_macro: (test=0.817) total time=   7.9s
+[2026-11-12 22:00:42] [CV 1/5] END model__min_samples_leaf=3, select__k=2000; accuracy: (test=0.891) balanced_accuracy: (test=0.835) f1_macro: (test=0.858) total time=  12.2s
+[2026-11-12 22:00:54] [CV 2/5] END model__min_samples_leaf=3, select__k=2000; accuracy: (test=0.865) balanced_accuracy: (test=0.785) f1_macro: (test=0.809) total time=  11.4s
+[2026-11-12 22:01:05] [CV 3/5] END model__min_samples_leaf=3, select__k=2000; accuracy: (test=0.885) balanced_accuracy: (test=0.810) f1_macro: (test=0.836) total time=  11.6s
+[2026-11-12 22:01:16] [CV 4/5] END model__min_samples_leaf=3, select__k=2000; accuracy: (test=0.904) balanced_accuracy: (test=0.837) f1_macro: (test=0.865) total time=  10.4s
+[2026-11-12 22:01:27] [CV 5/5] END model__min_samples_leaf=3, select__k=2000; accuracy: (test=0.876) balanced_accuracy: (test=0.797) f1_macro: (test=0.825) total time=  10.6s
+[2026-11-12 22:01:33] rf: search done in 4.9 min | best {'model__min_samples_leaf': 3, 'select__k': 500} | macro F1 0.8536
+[2026-11-12 22:01:33] GRID-EDGE WARNING: rf: best select__k=500 is at the lower edge of [500, 1000, 2000]; suggested extension: add select__k=250
+[2026-11-12 22:02:18] rf: cross_val_predict done in 45s
+[2026-11-12 22:02:18] rf: per-class CV F1 Basal=0.942, Her2=0.848, LumA=0.923, LumB=0.869, Normal=0.688
+[2026-11-12 22:02:26] rf: predict == argmax(predict_proba): 0 mismatches / 2618
+[2026-11-12 22:02:26] rf: saved rf_pipeline.joblib (4.0 MB)
+
+[2026-11-12 22:02:27] Pipeline cache cleared (C:\bc_cache\pipeline_cache)
+[2026-11-12 22:02:27] PHASE 3 DONE in 11.5 min
+
+[2026-11-12 22:02:27] CV SUMMARY
+[2026-11-12 22:02:27]  model                                                                         best_params  cv_f1_macro_mean  cv_f1_macro_std  cv_balanced_accuracy_mean  cv_balanced_accuracy_std  cv_accuracy_mean  cv_accuracy_std  mean_fit_time_s  search_time_min  n_fits  cvpred_f1_macro_final_model  final_refit_s  predict_vs_argmax_mismatches  model_file_mb  n_used_genes
+[2026-11-12 22:02:27] logreg                                                {"model__C": 0.1, "select__k": 1000}          0.881938         0.010035                   0.889014                  0.010472          0.903743         0.007974         1.529337         2.405476      60                     0.882198       2.327751                             0       0.569588          1000
+[2026-11-12 22:02:27]    svc {"model__C": 10, "model__gamma": "scale", "model__kernel": "rbf", "select__k": 500}          0.883334         0.005436                   0.876008                  0.006407          0.909092         0.006891         0.896107         2.426432      75                     0.881091       3.417623                             0      11.020471           500
+[2026-11-12 22:02:27]     rf                                    {"model__min_samples_leaf": 3, "select__k": 500}          0.853618         0.016189                   0.833550                  0.019124          0.891520         0.010707         5.934945         4.944763      30                     0.853961       7.641943                             0       4.018966           500
+
+[2026-11-12 22:02:27] PER-CLASS CV F1
+[2026-11-12 22:02:27]  model    Basal     Her2     LumA     LumB   Normal
+[2026-11-12 22:02:27] logreg 0.957169 0.869565 0.931193 0.872574 0.780488
+[2026-11-12 22:02:27]    svc 0.951673 0.880157 0.933283 0.884388 0.755952
+[2026-11-12 22:02:27]     rf 0.941620 0.848126 0.922907 0.869048 0.688103
+
+[2026-11-12 22:02:27] GRID-EDGE WARNINGS
+[2026-11-12 22:02:27] svc: best model__C=10 is at the upper edge of [1, 10]; suggested extension: add model__C=100
+[2026-11-12 22:02:27] svc: best select__k=500 is at the lower edge of [500, 1000, 2000]; suggested extension: add select__k=250
+[2026-11-12 22:02:27] rf: best select__k=500 is at the lower edge of [500, 1000, 2000]; suggested extension: add select__k=250
+
+[2026-11-13 19:05:14] ######################################################################
+[2026-11-13 19:05:14] PHASE 3b GRID EXTENSION RUN
+[2026-11-13 19:05:14] ######################################################################
+[2026-11-13 19:05:17] Loaded parquet cache C:\bc_cache\primary_dataset.parquet in 3.2s
+[2026-11-13 19:05:19] X_train (2618, 30865); test set NOT loaded
+
+[2026-11-13 19:05:19] ======================================================================
+[2026-11-13 19:05:19] EXTENSION: svc
+[2026-11-13 19:05:19] ======================================================================
+[2026-11-13 19:05:19] Fitting 5 folds for each of 9 candidates, totalling 45 fits
+[2026-11-13 19:05:22] [CV 1/5] END model__C=0.001, model__kernel=linear, select__k=250; accuracy: (test=0.863) balanced_accuracy: (test=0.893) f1_macro: (test=0.841) total time=   2.3s
+[2026-11-13 19:05:24] [CV 2/5] END model__C=0.001, model__kernel=linear, select__k=250; accuracy: (test=0.844) balanced_accuracy: (test=0.863) f1_macro: (test=0.818) total time=   1.9s
+[2026-11-13 19:05:26] [CV 3/5] END model__C=0.001, model__kernel=linear, select__k=250; accuracy: (test=0.859) balanced_accuracy: (test=0.884) f1_macro: (test=0.835) total time=   1.9s
+[2026-11-13 19:05:28] [CV 4/5] END model__C=0.001, model__kernel=linear, select__k=250; accuracy: (test=0.881) balanced_accuracy: (test=0.919) f1_macro: (test=0.868) total time=   2.2s
+[2026-11-13 19:05:30] [CV 5/5] END model__C=0.001, model__kernel=linear, select__k=250; accuracy: (test=0.881) balanced_accuracy: (test=0.888) f1_macro: (test=0.851) total time=   2.0s
+[2026-11-13 19:05:32] [CV 1/5] END model__C=0.01, model__kernel=linear, select__k=250; accuracy: (test=0.884) balanced_accuracy: (test=0.881) f1_macro: (test=0.851) total time=   1.5s
+[2026-11-13 19:05:33] [CV 2/5] END model__C=0.01, model__kernel=linear, select__k=250; accuracy: (test=0.891) balanced_accuracy: (test=0.913) f1_macro: (test=0.874) total time=   1.2s
+[2026-11-13 19:05:34] [CV 3/5] END model__C=0.01, model__kernel=linear, select__k=250; accuracy: (test=0.876) balanced_accuracy: (test=0.874) f1_macro: (test=0.844) total time=   1.1s
+[2026-11-13 19:05:35] [CV 4/5] END model__C=0.01, model__kernel=linear, select__k=250; accuracy: (test=0.889) balanced_accuracy: (test=0.904) f1_macro: (test=0.873) total time=   0.9s
+[2026-11-13 19:05:36] [CV 5/5] END model__C=0.01, model__kernel=linear, select__k=250; accuracy: (test=0.887) balanced_accuracy: (test=0.887) f1_macro: (test=0.858) total time=   1.0s
+[2026-11-13 19:05:37] [CV 1/5] END model__C=0.1, model__kernel=linear, select__k=250; accuracy: (test=0.889) balanced_accuracy: (test=0.873) f1_macro: (test=0.860) total time=   0.8s
+[2026-11-13 19:05:38] [CV 2/5] END model__C=0.1, model__kernel=linear, select__k=250; accuracy: (test=0.893) balanced_accuracy: (test=0.882) f1_macro: (test=0.870) total time=   0.8s
+[2026-11-13 19:05:39] [CV 3/5] END model__C=0.1, model__kernel=linear, select__k=250; accuracy: (test=0.893) balanced_accuracy: (test=0.858) f1_macro: (test=0.852) total time=   0.9s
+[2026-11-13 19:05:40] [CV 4/5] END model__C=0.1, model__kernel=linear, select__k=250; accuracy: (test=0.887) balanced_accuracy: (test=0.863) f1_macro: (test=0.852) total time=   0.8s
+[2026-11-13 19:05:41] [CV 5/5] END model__C=0.1, model__kernel=linear, select__k=250; accuracy: (test=0.895) balanced_accuracy: (test=0.869) f1_macro: (test=0.866) total time=   0.9s
+[2026-11-13 19:05:42] [CV 1/5] END model__C=1, model__gamma=scale, model__kernel=rbf, select__k=250; accuracy: (test=0.891) balanced_accuracy: (test=0.899) f1_macro: (test=0.866) total time=   0.9s
+[2026-11-13 19:05:43] [CV 2/5] END model__C=1, model__gamma=scale, model__kernel=rbf, select__k=250; accuracy: (test=0.868) balanced_accuracy: (test=0.888) f1_macro: (test=0.847) total time=   1.0s
+[2026-11-13 19:05:44] [CV 3/5] END model__C=1, model__gamma=scale, model__kernel=rbf, select__k=250; accuracy: (test=0.880) balanced_accuracy: (test=0.872) f1_macro: (test=0.846) total time=   0.9s
+[2026-11-13 19:05:45] [CV 4/5] END model__C=1, model__gamma=scale, model__kernel=rbf, select__k=250; accuracy: (test=0.901) balanced_accuracy: (test=0.915) f1_macro: (test=0.885) total time=   1.0s
+[2026-11-13 19:05:46] [CV 5/5] END model__C=1, model__gamma=scale, model__kernel=rbf, select__k=250; accuracy: (test=0.895) balanced_accuracy: (test=0.884) f1_macro: (test=0.861) total time=   0.9s
+[2026-11-13 19:05:47] [CV 1/5] END model__C=10, model__gamma=scale, model__kernel=rbf, select__k=250; accuracy: (test=0.922) balanced_accuracy: (test=0.900) f1_macro: (test=0.897) total time=   0.9s
+[2026-11-13 19:05:48] [CV 2/5] END model__C=10, model__gamma=scale, model__kernel=rbf, select__k=250; accuracy: (test=0.893) balanced_accuracy: (test=0.868) f1_macro: (test=0.866) total time=   0.9s
+[2026-11-13 19:05:49] [CV 3/5] END model__C=10, model__gamma=scale, model__kernel=rbf, select__k=250; accuracy: (test=0.889) balanced_accuracy: (test=0.842) f1_macro: (test=0.848) total time=   0.9s
+[2026-11-13 19:05:50] [CV 4/5] END model__C=10, model__gamma=scale, model__kernel=rbf, select__k=250; accuracy: (test=0.910) balanced_accuracy: (test=0.878) f1_macro: (test=0.884) total time=   0.9s
+[2026-11-13 19:05:51] [CV 5/5] END model__C=10, model__gamma=scale, model__kernel=rbf, select__k=250; accuracy: (test=0.904) balanced_accuracy: (test=0.873) f1_macro: (test=0.879) total time=   0.9s
+[2026-11-13 19:05:53] [CV 1/5] END model__C=100, model__gamma=scale, model__kernel=rbf, select__k=250; accuracy: (test=0.918) balanced_accuracy: (test=0.884) f1_macro: (test=0.889) total time=   1.0s
+[2026-11-13 19:05:54] [CV 2/5] END model__C=100, model__gamma=scale, model__kernel=rbf, select__k=250; accuracy: (test=0.891) balanced_accuracy: (test=0.869) f1_macro: (test=0.868) total time=   1.0s
+[2026-11-13 19:05:55] [CV 3/5] END model__C=100, model__gamma=scale, model__kernel=rbf, select__k=250; accuracy: (test=0.889) balanced_accuracy: (test=0.841) f1_macro: (test=0.850) total time=   0.9s
+[2026-11-13 19:05:56] [CV 4/5] END model__C=100, model__gamma=scale, model__kernel=rbf, select__k=250; accuracy: (test=0.910) balanced_accuracy: (test=0.876) f1_macro: (test=0.886) total time=   0.9s
+[2026-11-13 19:05:57] [CV 5/5] END model__C=100, model__gamma=scale, model__kernel=rbf, select__k=250; accuracy: (test=0.902) balanced_accuracy: (test=0.859) f1_macro: (test=0.872) total time=   1.0s
+[2026-11-13 19:05:58] [CV 1/5] END model__C=100, model__gamma=scale, model__kernel=rbf, select__k=500; accuracy: (test=0.910) balanced_accuracy: (test=0.879) f1_macro: (test=0.884) total time=   1.3s
+[2026-11-13 19:06:00] [CV 2/5] END model__C=100, model__gamma=scale, model__kernel=rbf, select__k=500; accuracy: (test=0.901) balanced_accuracy: (test=0.868) f1_macro: (test=0.878) total time=   1.4s
+[2026-11-13 19:06:01] [CV 3/5] END model__C=100, model__gamma=scale, model__kernel=rbf, select__k=500; accuracy: (test=0.912) balanced_accuracy: (test=0.877) f1_macro: (test=0.885) total time=   1.4s
+[2026-11-13 19:06:03] [CV 4/5] END model__C=100, model__gamma=scale, model__kernel=rbf, select__k=500; accuracy: (test=0.920) balanced_accuracy: (test=0.882) f1_macro: (test=0.893) total time=   1.3s
+[2026-11-13 19:06:04] [CV 5/5] END model__C=100, model__gamma=scale, model__kernel=rbf, select__k=500; accuracy: (test=0.904) balanced_accuracy: (test=0.874) f1_macro: (test=0.883) total time=   1.4s
+[2026-11-13 19:06:07] [CV 1/5] END model__C=100, model__gamma=scale, model__kernel=rbf, select__k=1000; accuracy: (test=0.899) balanced_accuracy: (test=0.860) f1_macro: (test=0.867) total time=   2.2s
+[2026-11-13 19:06:09] [CV 2/5] END model__C=100, model__gamma=scale, model__kernel=rbf, select__k=1000; accuracy: (test=0.899) balanced_accuracy: (test=0.857) f1_macro: (test=0.871) total time=   2.1s
+[2026-11-13 19:06:11] [CV 3/5] END model__C=100, model__gamma=scale, model__kernel=rbf, select__k=1000; accuracy: (test=0.905) balanced_accuracy: (test=0.853) f1_macro: (test=0.869) total time=   2.2s
+[2026-11-13 19:06:13] [CV 4/5] END model__C=100, model__gamma=scale, model__kernel=rbf, select__k=1000; accuracy: (test=0.906) balanced_accuracy: (test=0.862) f1_macro: (test=0.876) total time=   2.2s
+[2026-11-13 19:06:16] [CV 5/5] END model__C=100, model__gamma=scale, model__kernel=rbf, select__k=1000; accuracy: (test=0.899) balanced_accuracy: (test=0.869) f1_macro: (test=0.875) total time=   2.1s
+[2026-11-13 19:06:21] [CV 1/5] END model__C=100, model__gamma=scale, model__kernel=rbf, select__k=2000; accuracy: (test=0.885) balanced_accuracy: (test=0.844) f1_macro: (test=0.849) total time=   5.1s
+[2026-11-13 19:06:26] [CV 2/5] END model__C=100, model__gamma=scale, model__kernel=rbf, select__k=2000; accuracy: (test=0.891) balanced_accuracy: (test=0.846) f1_macro: (test=0.858) total time=   5.4s
+[2026-11-13 19:06:32] [CV 3/5] END model__C=100, model__gamma=scale, model__kernel=rbf, select__k=2000; accuracy: (test=0.891) balanced_accuracy: (test=0.839) f1_macro: (test=0.859) total time=   5.1s
+[2026-11-13 19:06:37] [CV 4/5] END model__C=100, model__gamma=scale, model__kernel=rbf, select__k=2000; accuracy: (test=0.899) balanced_accuracy: (test=0.854) f1_macro: (test=0.872) total time=   5.4s
+[2026-11-13 19:06:42] [CV 5/5] END model__C=100, model__gamma=scale, model__kernel=rbf, select__k=2000; accuracy: (test=0.902) balanced_accuracy: (test=0.864) f1_macro: (test=0.874) total time=   5.2s
+[2026-11-13 19:06:43] svc: 9 new combos (45 fits) in 1.4 min
+[2026-11-13 19:06:43] svc: previous best {'model__C': 10, 'model__gamma': 'scale', 'model__kernel': 'rbf', 'select__k': 500} | new best {'model__C': 100, 'model__gamma': 'scale', 'model__kernel': 'rbf', 'select__k': 500} (macro F1 0.8844 ± 0.0049)
+[2026-11-13 19:06:43] top 5 combos:
+[2026-11-13 19:06:43]                                                                               params  mean_test_f1_macro  std_test_f1_macro
+[2026-11-13 19:06:43] {'model__C': 100, 'model__gamma': 'scale', 'model__kernel': 'rbf', 'select__k': 500}            0.884431           0.004892
+[2026-11-13 19:06:43]  {'model__C': 10, 'model__gamma': 'scale', 'model__kernel': 'rbf', 'select__k': 500}            0.883334           0.005436
+[2026-11-13 19:06:43]                     {'model__C': 0.01, 'model__kernel': 'linear', 'select__k': 1000}            0.882343           0.011432
+[2026-11-13 19:06:43] {'model__C': 10, 'model__gamma': 'scale', 'model__kernel': 'rbf', 'select__k': 1000}            0.875068           0.002133
+[2026-11-13 19:06:43]  {'model__C': 10, 'model__gamma': 'scale', 'model__kernel': 'rbf', 'select__k': 250}            0.874723           0.016849
+[2026-11-13 19:06:43] GRID-EDGE WARNING: svc: best model__C=100 is at the upper edge of [1, 10, 100] (not extended further)
+[2026-11-13 19:06:43] svc: BEST PARAMS CHANGED -> refitting and re-saving the final pipeline
+[2026-11-13 19:07:00] svc: cross_val_predict done in 17s
+[2026-11-13 19:07:00] svc: per-class CV F1 Basal=0.952, Her2=0.880, LumA=0.936, LumB=0.882, Normal=0.776
+[2026-11-13 19:07:26] svc: predict == argmax(predict_proba): 0 mismatches
+[2026-11-13 19:07:27] svc: saved svc_pipeline.joblib (11.0 MB, 500 genes)
+
+[2026-11-13 19:07:27] ======================================================================
+[2026-11-13 19:07:27] EXTENSION: rf
+[2026-11-13 19:07:27] ======================================================================
+[2026-11-13 19:07:27] Fitting 5 folds for each of 2 candidates, totalling 10 fits
+[2026-11-13 19:07:32] [CV 1/5] END model__min_samples_leaf=1, select__k=250; accuracy: (test=0.887) balanced_accuracy: (test=0.811) f1_macro: (test=0.844) total time=   5.2s
+[2026-11-13 19:07:37] [CV 2/5] END model__min_samples_leaf=1, select__k=250; accuracy: (test=0.882) balanced_accuracy: (test=0.799) f1_macro: (test=0.830) total time=   4.8s
+[2026-11-13 19:07:43] [CV 3/5] END model__min_samples_leaf=1, select__k=250; accuracy: (test=0.882) balanced_accuracy: (test=0.783) f1_macro: (test=0.816) total time=   5.6s
+[2026-11-13 19:07:49] [CV 4/5] END model__min_samples_leaf=1, select__k=250; accuracy: (test=0.889) balanced_accuracy: (test=0.805) f1_macro: (test=0.834) total time=   6.4s
+[2026-11-13 19:07:55] [CV 5/5] END model__min_samples_leaf=1, select__k=250; accuracy: (test=0.866) balanced_accuracy: (test=0.755) f1_macro: (test=0.790) total time=   5.6s
+[2026-11-13 19:07:59] [CV 1/5] END model__min_samples_leaf=3, select__k=250; accuracy: (test=0.895) balanced_accuracy: (test=0.847) f1_macro: (test=0.861) total time=   4.4s
+[2026-11-13 19:08:04] [CV 2/5] END model__min_samples_leaf=3, select__k=250; accuracy: (test=0.885) balanced_accuracy: (test=0.837) f1_macro: (test=0.852) total time=   4.3s
+[2026-11-13 19:08:08] [CV 3/5] END model__min_samples_leaf=3, select__k=250; accuracy: (test=0.887) balanced_accuracy: (test=0.820) f1_macro: (test=0.844) total time=   4.2s
+[2026-11-13 19:08:14] [CV 4/5] END model__min_samples_leaf=3, select__k=250; accuracy: (test=0.891) balanced_accuracy: (test=0.828) f1_macro: (test=0.849) total time=   5.4s
+[2026-11-13 19:19:25] [CV 5/5] END model__min_samples_leaf=3, select__k=250; accuracy: (test=0.889) balanced_accuracy: (test=0.815) f1_macro: (test=0.839) total time=11.2min
+[2026-11-13 19:19:26] rf: 2 new combos (10 fits) in 12.0 min
+[2026-11-13 19:19:26] rf: previous best {'model__min_samples_leaf': 3, 'select__k': 500} | new best {'model__min_samples_leaf': 3, 'select__k': 500} (macro F1 0.8536 ± 0.0162)
+[2026-11-13 19:19:26] top 5 combos:
+[2026-11-13 19:19:26]                                            params  mean_test_f1_macro  std_test_f1_macro
+[2026-11-13 19:19:26]  {'model__min_samples_leaf': 3, 'select__k': 500}            0.853618           0.016189
+[2026-11-13 19:19:26]  {'model__min_samples_leaf': 3, 'select__k': 250}            0.848948           0.007372
+[2026-11-13 19:19:26] {'model__min_samples_leaf': 3, 'select__k': 1000}            0.841849           0.017241
+[2026-11-13 19:19:26] {'model__min_samples_leaf': 3, 'select__k': 2000}            0.838547           0.020722
+[2026-11-13 19:19:26]  {'model__min_samples_leaf': 1, 'select__k': 250}            0.822793           0.018552
+[2026-11-13 19:19:26] rf: best params unchanged -> saved pipeline kept as is
+
+[2026-11-13 19:19:26] Pipeline cache cleared. PHASE 3b DONE in 14.2 min
+
+[2026-11-13 19:19:26] CV SUMMARY
+[2026-11-13 19:19:26]                                                                                  best_params  cv_f1_macro_mean  cv_f1_macro_std  cv_balanced_accuracy_mean  cv_balanced_accuracy_std
+[2026-11-13 19:19:26] model                                                                                                                                                                               
+[2026-11-13 19:19:26] logreg                                                  {"model__C": 0.1, "select__k": 1000}          0.881938         0.010035                   0.889014                  0.010472
+[2026-11-13 19:19:26] svc     {"model__C": 100, "model__gamma": "scale", "model__kernel": "rbf", "select__k": 500}          0.884431         0.004892                   0.875971                  0.004669
+[2026-11-13 19:19:26] rf                                          {"model__min_samples_leaf": 3, "select__k": 500}          0.853618         0.016189                   0.833550                  0.019124
+
+[2026-11-13 19:19:26] PER-CLASS CV F1
+[2026-11-13 19:19:26]         Basal   Her2   LumA   LumB  Normal
+[2026-11-13 19:19:26] model                                     
+[2026-11-13 19:19:26] logreg  0.957  0.870  0.931  0.873   0.780
+[2026-11-13 19:19:26] svc     0.952  0.880  0.936  0.882   0.776
+[2026-11-13 19:19:26] rf      0.942  0.848  0.923  0.869   0.688
+
+[2026-11-13 19:19:26] GRID-EDGE WARNINGS
+[2026-11-13 19:19:26] svc: best model__C=100 is at the upper edge of [1, 10, 100] (not extended further)

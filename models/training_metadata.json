@@ -1,0 +1,14 @@
+{
+  "trained_at": "2026-11-12T22:02:26",
+  "sklearn": "1.6.1",
+  "n_train": 2618,
+  "n_input_genes": 30865,
+  "cv": "StratifiedKFold(5, shuffle=True, random_state=42)",
+  "class_order": [
+    "Basal",
+    "Her2",
+    "LumA",
+    "LumB",
+    "Normal"
+  ]
+}

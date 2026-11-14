@@ -1,0 +1,4 @@
+model,n_used_genes,model_features_bitwise_identical,predictions_identical,probabilities_bitwise_identical,max_abs_prob_diff,same_input_rerun_prob_diff,refuses_when_used_gene_missing,transposed_input_parsed_identically,demo_correct,demo_n
+logreg,1000,True,True,True,0.0,0.0,True,True,10,10
+svc,500,True,True,True,0.0,0.0,True,True,9,10
+rf,500,True,True,False,2.7755575615628914e-17,2.7755575615628914e-17,True,True,8,10

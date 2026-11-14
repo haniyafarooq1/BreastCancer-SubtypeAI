@@ -1,0 +1,12 @@
+{
+  "primary_model": "logreg",
+  "file": "logreg_pipeline.joblib",
+  "selected_by": "results/ml/model_selection_rule.md (CV macro F1; LR tie-break within 1 SD)",
+  "class_order": [
+    "Basal",
+    "Her2",
+    "LumA",
+    "LumB",
+    "Normal"
+  ]
+}

@@ -1,0 +1,5 @@
+comparison,n_overlap,genes,expected_by_chance
+LR top50 ∩ statistical top50 (max |effect|),5,"ESR1, KRT17, MAPT, MGC4836, TBC1D9",0.09
+RF top50 ∩ statistical top50 (max |effect|),25,"AR, BC070495, C14orf25, C2orf40, CA12, CCDC170, COL17A1, CT62, DEGS2, ESR1, FOXA1, FOXC1, GATA3, IL6ST, KRT14, KRT17, KRT5, MIA, MLPH, PRR15, SFRP1, SOX10, SYNM, TBC1D9, THSD4",0.09
+LR top50 ∩ statistical top50 (Kruskal H),4,"BIRC5, ESR1, PTTG1, TBC1D9",0.09
+LR top50 ∩ RF top50,9,"BCL2, BIRC5, ERBB2, ESR1, KRT17, NAT1, PTTG1, SLC39A6, TBC1D9",0.09
